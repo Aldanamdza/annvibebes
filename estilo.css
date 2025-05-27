@@ -1,0 +1,672 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-position: center;
+  background-size: auto;
+  font-family: "Comic Neue", cursive;
+  background-image: url(./images/fondo-corazon.png);
+  color: #555555;
+  margin: 0px;
+  background-repeat: repeat;
+
+}
+
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #F48FB1;
+  padding: 2px;
+  font-family: "Comic Neue", cursive;
+  background-color: #FADADD;
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.imglogo {
+  width: 150px;
+  height: auto;
+  margin: 15px;
+  padding-top: 25px;
+  border: 0px hidden black;
+  position: relative;
+}
+
+.titulo-pag {
+  color: #F48FB1;
+  font-size: 6rem;
+  font-family: "Comic Neue", cursive;
+  text-align: center;
+  padding-top: 25px;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 3rem;
+  margin-top: 10px;
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+  color: #444;
+  padding: 3px;
+}
+
+.recuadro {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+
+.recuadro>div {
+  position: relative;
+}
+
+.item {
+  display: inline-block;
+  min-width: 180px;
+  max-width: 220px;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  background-color: #c2e9f6;
+  color: #0b0b0b;
+  text-align: center;
+  white-space: normal;
+  border-radius: 9px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #c2e9f6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 80px;
+  z-index: 100;
+  border-radius: 9px;
+
+}
+
+.submenu li a {
+  display: block;
+  color: #444;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #aad4f6;
+  border-radius: 9px;
+}
+
+.recuadro>div:hover .submenu {
+  display: block;
+}
+
+.main {
+  display: flex;
+  max-width: auto;
+  margin: auto;
+  padding: 0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  font-family: 'Comic Neue', cursive;
+
+}
+
+.contenido-principal {
+  text-align: center;
+  position: relative;
+}
+
+.pdescripcion {
+  font-size: 1.5rem;
+  color: #444;
+  font-family: 'Comic Neue', cursive;
+  margin-bottom: 25px;
+  padding: 0 10px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.banner img {
+  width: 50%;
+  height: 60%;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 9px;
+
+}
+
+.pie {
+  background-color: #FADADD;
+  text-align: center;
+  color: #0b0b0b;
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.horarios p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #0b0b0b;
+}
+
+.redes {
+  margin: 15px 0;
+}
+
+.redes a {
+  font-size: 2rem;
+  color: #0b0b0b;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.redes a:hover {
+  color: #8A2BE2;
+}
+
+.creditos {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.creditos a {
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.creditos a:hover {
+  text-decoration: underline;
+}
+
+.grupo-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  margin-left: 15px;
+
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #c2e9f6;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba (0, 0, 0, 0.1);
+  height: auto;
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+}
+
+.subproducto {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+  font-size: 2.2em;
+  color: #b57edc;
+  font-weight: bold;
+}
+
+.imgproducto {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0 0 0 0.1);
+}
+
+.talles {
+  text-align: center;
+  gap: 10px;
+  font-family: 'Comic Neue', cursive;
+  font-size: 1em;
+  color: black;
+  font-weight: bold;
+}
+
+#talle1 {
+  font-family: 'Comic Neue', cursive;
+  height: 25px;
+  width: 50px;
+  border-radius: 4px;
+  border: 2px solid #c2e9f6;
+}
+
+.pack {
+  display: flex;
+  font-family: 'Comic Neue', cursive;
+  max-width: 150px;
+}
+
+.option {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 3px;
+  margin-top: 10px;
+
+}
+
+.card-option {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 4px 10px;
+  border: 2px solid #c2e9f6;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 80px;
+}
+
+.card-option:hover {
+  border-color: #9e14e8;
+  background-color: #f9f9f9;
+}
+
+.precio {
+  gap: 2px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.boton-agregar {
+  text-align: center;
+  gap: 10px;
+  font-family: 'Comic Neue', cursive;
+  width: 100px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #c2e9f6;
+  color: #444;
+  font-size: 1rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0 0 0 0.1);
+  ;
+}
+
+.boton-agregar:hover {
+  background-color: #aad4f6;
+}
+
+.contacto-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contacto-info {
+  flex: 1 1 100%;
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: #444;
+  margin: auto;
+}
+
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.subtit {
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+  color: #b57edc;
+  font-size: 2.2rem;
+  gap: 20px;
+  padding: 10px;
+}
+
+.video {
+  max-width: 700px;
+  margin: 20px auto;
+  aspect-ratio: 16/9;
+}
+
+.video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.formulario-cont {
+  flex: 1;
+  max-width: 400px;
+  min-width: 280px;
+  padding: 25px;
+  background-color: #f3f0f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0 0 0 0.1);
+
+}
+
+.formulario-cont input,
+.formulario-cont textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  border: 1px solid #d6d6e0;
+  border-radius: 8px;
+}
+
+.botones-formulario {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.boton-formulario {
+  flex: 1 1 48%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #c2e9f6;
+  color: #444;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-formulario:hover {
+  background-color: #aad4f6;
+}
+
+.grid-reseñas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.reseñas {
+  border: 2px solid #c2e9f6;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0 0 0 0.1);
+  font-family: 'Comic Neue', cursive;
+  transition: transform 0.3s ease;
+}
+
+.cliente-nombre {
+  color: #b57edc;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.estrellas {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.comentario {
+  color: #444;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.boton-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  background-color: #77eebf;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10%;
+  text-decoration: 20px;
+  z-index: 1000;
+}
+
+#panales ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+#panales ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  background-color: #f2f2fe;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#panales ul li a:hover {
+  background-color: #ddd;
+}
+
+@media (max-width:768px) {
+  .logo-titulo {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .imglogo {
+    width: 100px;
+    padding-top: 10px;
+    margin: 10px 0;
+  }
+
+  .titulo-pag {
+    font-size: 2.5rem;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .slogan {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .recuadro {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item {
+    width: 90%;
+    max-width: 300px;
+    font-size: 1rem;
+  }
+
+  .submenu {
+    display: relative;
+    background-color: #eaf8fc;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .submenu li a {
+    padding: 8px;
+    display: block;
+    font-size: 1rem;
+  }
+
+  .submenu li a:hover {
+    background-color: #d1ecf9;
+  }
+
+  .grupo-productos {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-left: 0;
+  }
+
+  .producto {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .subproducto {
+    font-size: 1.6rem;
+  }
+
+  .imgproducto {
+    width: 100px;
+    height: 100px;
+  }
+
+  .talls,
+  .precio,
+  .boton-agregar {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .pack {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-option {
+    width: 100px;
+    margin-bottom: 5px;
+  }
+
+  .video {
+    padding: 0 15px;
+  }
+
+  .contacto-layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contacto-info,
+  .formulario-cont {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacto {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .formulario-cont input [type="submit"],
+  .formulario-cont input [type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .grid-reseñas {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .reseñas {
+    padding: 15px;
+    font-size: 0.5rem;
+  }
+
+  .cliente-nombre {
+    font-size: 1.2rem;
+  }
+
+  .estrellas {
+    font-size: 1rem;
+  }
+
+  .comentario {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .pie {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .enlaces-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .redes a {
+    font-size: 1.5rem;
+  }
+
+  .creditos p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
