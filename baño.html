@@ -11,11 +11,12 @@
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./css/estilos/estilo.css">
     <title>AnnVi-Pañalera online</title>
 </head>
 <body>
      <section id="subir"></section>
+     
    <header id="inicio" class="encabezado">
     <div class="logo-titulo">
       <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
@@ -38,6 +39,13 @@
       </div>
     </nav>
   </header>
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <p>Total: $<span id="total-carrito">0</span></p>
+    <ul id="lista-carrito"></ul>
+</div>
+<button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
     <main>
         <section id="panales">
             <ul>
@@ -57,8 +65,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="jabon" data-nombre="J&J Baño Liquido glicerina x200ml" data-precio="3000">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Algabo Baby Jabon Liquido DP 200ml</div>
@@ -67,8 +75,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="jabon" data-nombre="Algabo Baby Jabon Liquido DP 200ml" data-precio="2000">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Algabo Baby Jabon Pastilla 80g</div>
@@ -77,8 +85,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="jabon" data-nombre="Algabo Baby Jabon Pastilla 80g" data-precio="2100">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Estrella Jabon Suave Baby x75g</div>
@@ -88,8 +96,9 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="jabon" data-nombre="Estrella Jabon Suave Baby x75g" data-precio="2100">Agregar al carrito</button>
+                    </div>
+            </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Estrella Jabon duerme Baby x75g</div>
@@ -97,20 +106,20 @@
                     <img src="./images/estrella-jabon-duerme-75g.png" alt="estrella-jabon-duerme-75g"
                         class="imgproducto">
                 </div>
-                <div class="precio">Precio: $10000</div>
+                <div class="precio">Precio: $2000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="jabon" data-nombre="Estrella Jabon duerme Baby x75g" data-precio="2100">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Estrella Jabon Glicerina Baby x 75ml</div>
                 <div>
                     <img src="./images/estrella-glice-75gr.jpg" alt="estrella-jabon-duerme-75g" class="imgproducto">
                 </div>
-                <div class="precio">Precio: $10000</div>
+                <div class="precio">Precio: $1800</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="jabon" data-nombre="Estrella Jabon Glicerina Baby x 75ml" data-precio="2100">Agregar al carrito</button>
+                    </div>
             </div>
         </div>
         <h3 class="subtit" id="shampoo">Shampoo y Acondicionador</h3>
@@ -124,8 +133,8 @@
                 </div>
                 <div class="precio">Precio: $5000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="shampoo" data-nombre="J&J Shampoo Hidrat Intensa x200m" data-precio="2100">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">J&J Shampoo Original Amar x200ml</div>
@@ -135,8 +144,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="shampoo" data-nombre="J&J Shampoo Original Amar x200ml" data-precio="2100">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">J&J Shampoo Manzanilla x200ml</div>
@@ -144,10 +153,10 @@
                     <img src="./images/jyj-shampoo-manzanillax200ml.png" alt="jyj-shampoo-manzanillax200ml"
                         class="imgproducto">
                 </div>
-                <div class="precio">Precio: $10000</div>
+                <div class="precio">Precio: $2100</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="shampoo" data-nombre="J&J Shampoo Manzanilla x200ml" data-precio="2100">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">J&J Acondic. Hidrat. Intensa x200ml</div>
@@ -155,10 +164,10 @@
                     <img src="./images/jyj-acondic-hidrat-intensax200ml.jpg" alt="jyj-acondic-hidrat-intensax200ml"
                         class="imgproducto">
                 </div>
-                <div class="precio">Precio: $10000</div>
-                <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                <div class="precio">Precio: $5400</div>
+               <div>
+                        <button class="comprar" data-id="shampoo" data-nombre="J&J Acondic. Hidrat. Intensa x200ml" data-precio="5400">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">J&J Acondicionador original x200ml</div>
@@ -166,10 +175,10 @@
                     <img src="./images/jyj-acondic-originalx200ml.jpg" alt="jyj-acondic-originalx200ml"
                         class="imgproducto">
                 </div>
-                <div class="precio">Precio: $10000</div>
-                <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                <div class="precio">Precio: $5400</div>
+                  <div>
+                        <button class="comprar" data-id="shampoo" data-nombre="J&J Acondicionador original x200ml" data-precio="5400">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">J&J Acondicionador Manzana x200ml</div>
@@ -177,10 +186,10 @@
                     <img src="./images/jyj-acondicionador-manzanax200ml.jpeg" alt="jyj-acondicionador-manzanax200ml"
                         class="imgproducto">
                 </div>
-                <div class="precio">Precio: $10000</div>
-                <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                <div class="precio">Precio: $5200</div>
+               <div>
+                        <button class="comprar" data-id="shampoo" data-nombre="J&J Acondicionador Manzana x200ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Baby Basic Shampoo Manzana x210ml</div>
@@ -189,8 +198,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="shampoo" data-nombre="Baby Basic Shampoo Manzana x210ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Baby Basic Acondicionador Manzana x210ml</div>
@@ -199,8 +208,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="shampoo" data-nombre="Baby Basic Acondicionador Manzana x210ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Estrella Shampoo Suave x400ml</div>
@@ -210,8 +219,19 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="shampoo" data-nombre="Estrella Shampoo Suave x400ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
+            </div>
+            <div class="producto">
+                <div class="subproducto">Estrella Acondicionador Suave x400ml</div>
+                <div>
+                    <img src="./images/estrella-acond-suave-400ml.jpeg" alt="estrella-acond-suave-400ml"
+                        class="imgproducto">
                 </div>
+                <div class="precio">Precio: $10000</div>
+               <div>
+                        <button class="comprar" data-id="shampoo" data-nombre="Estrella Acondicionador Suave x400ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="producto">
                 <div class="subproducto">Estrella Acondicionador Suave x400ml</div>
@@ -221,19 +241,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="subproducto">Estrella Acondicionador Suave x400ml</div>
-                <div>
-                    <img src="./images/estrella-acond-suave-400ml.jpeg" alt="estrella-acond-suave-400ml"
-                        class="imgproducto">
-                </div>
-                <div class="precio">Precio: $10000</div>
-                <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="shampoo" data-nombre="Estrella Acondicionador Suave x400ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
             </div>
         </div>
         <h3 class="subtit" id="aceites">Aceites</h3>
@@ -246,8 +255,8 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </div>
+                        <button class="comprar" data-id="aceites" data-nombre="J&J Aceite puro x100ml" data-precio="5200">Agregar al carrito</button>
+                    </div>
             </div>
             <div class="grupo-productos">
                 <div class="producto">
@@ -256,8 +265,8 @@
                         <img src="./images/algabo-aceite.png" alt="algabo-aceite" class="imgproducto">
                     </div>
                     <div class="precio">Precio: $10000</div>
-                    <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                     <div>
+                        <button class="comprar" data-id="aceites" data-nombre="Algabo Baby aceite para bebé" data-precio="5200">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -294,6 +303,7 @@
         </div>
     </footer>
     <a href="./inicio.html">Volver</a>
+     <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ body {
   background-position: center;
   background-size: auto;
   font-family: "Comic Neue", cursive;
-  background-image: url(./images/fondo-corazon.png);
+  background-color:#efe0fb;
   color: #555555;
   margin: 0px;
   background-repeat: repeat;
@@ -21,10 +21,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #F48FB1;
+  color: #7009ee;
   padding: 2px;
   font-family: "Comic Neue", cursive;
-  background-color: #FADADD;
+  background-color: #dfb8f3;
 }
 
 .logo-titulo {
@@ -45,7 +45,7 @@ body {
 }
 
 .titulo-pag {
-  color: #F48FB1;
+  color: #7009ee;
   font-size: 6rem;
   font-family: "Comic Neue", cursive;
   text-align: center;
@@ -58,11 +58,12 @@ body {
   margin-top: 10px;
   font-family: 'Comic Neue', cursive;
   text-align: center;
-  color: #444;
+  color: #000000;
   padding: 3px;
 }
 
 .recuadro {
+  position:relative;
   display: flex;
   gap: 15px;
   margin-top: 15px;
@@ -82,9 +83,10 @@ body {
   max-width: 220px;
   text-decoration: none;
   padding: 10px 15px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background-color: #c2e9f6;
   color: #0b0b0b;
+  text-decoration: none;
   text-align: center;
   white-space: normal;
   border-radius: 9px;
@@ -92,22 +94,22 @@ body {
 
 .submenu {
   display: none;
-  position: absolute;
+  position:static;
   top: 100%;
   left: 0;
   background-color: #c2e9f6;
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 80px;
-  z-index: 100;
+  min-width: 100%;
+  z-index: 1000;
   border-radius: 9px;
 
 }
 
 .submenu li a {
   display: block;
-  color: #444;
+  color: #010101;
   padding: 10px;
   text-decoration: none;
 }
@@ -128,6 +130,8 @@ body {
   padding: 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   font-family: 'Comic Neue', cursive;
+  position: relative;
+  z-index: 1;
 
 }
 
@@ -138,7 +142,7 @@ body {
 
 .pdescripcion {
   font-size: 1.5rem;
-  color: #444;
+  color: #010101;
   font-family: 'Comic Neue', cursive;
   margin-bottom: 25px;
   padding: 0 10px;
@@ -156,7 +160,7 @@ body {
 }
 
 .pie {
-  background-color: #FADADD;
+  background-color: #dfb8f3;
   text-align: center;
   color: #0b0b0b;
   font-family: 'Comic Neue', cursive;
@@ -192,7 +196,7 @@ body {
 }
 
 .creditos a {
-  color: #444;
+  color: #010101;
   text-decoration: none;
   font-weight: bold;
 }
@@ -312,7 +316,7 @@ body {
   background-color: #f9f9f9;
   border-radius: 10px;
   border: 1px solid #c2e9f6;
-  color: #444;
+  color: #222121;
   font-size: 1rem;
   padding: 10px 15px;
   cursor: pointer;
@@ -338,7 +342,7 @@ body {
   flex: 1 1 100%;
   max-width: 600px;
   font-size: 1.2rem;
-  color: #444;
+  color: #222121;
   margin: auto;
 }
 
@@ -355,7 +359,7 @@ body {
 .subtit {
   font-family: 'Comic Neue', cursive;
   text-align: center;
-  color: #b57edc;
+  color: #9308f7;
   font-size: 2.2rem;
   gap: 20px;
   padding: 10px;
@@ -408,7 +412,7 @@ body {
   padding: 10px;
   font-size: 1rem;
   background-color: #c2e9f6;
-  color: #444;
+  color: #222121;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -429,7 +433,7 @@ body {
 }
 
 .reseñas {
-  border: 2px solid #c2e9f6;
+  border: 2px solid #c2c5f6;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0 0 0 0.1);
@@ -438,7 +442,7 @@ body {
 }
 
 .cliente-nombre {
-  color: #b57edc;
+  color: #9303fa;
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 5px;
@@ -453,7 +457,7 @@ body {
 }
 
 .comentario {
-  color: #444;
+  color: #222121;
   font-size: 2rem;
   text-align: left;
 }
@@ -482,7 +486,7 @@ body {
 
 #panales ul li a {
   text-decoration: none;
-  color: #333;
+  color: #222121;
   font-weight: bold;
   padding: 8px 12px;
   background-color: #f2f2fe;

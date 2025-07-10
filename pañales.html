@@ -12,10 +12,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./css/estilos/estilo.css">
+    
     <title>AnnVi-Pañalera online</title>
 </head>
-
 <body>
      <section id="subir"></section>
    <header id="inicio" class="encabezado">
@@ -34,13 +34,21 @@
             <li><a href="./baño.html">Baño</a></li>
           </ul>
         </div>
-        <div><a href="./compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
+        <div><a href="./info-compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
         <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
         <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
       </div>
     </nav>
   </header>
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <p>Total: $<span id="total-carrito">0</span></p>
+    <ul id="lista-carrito"></ul>
+</div>
+<button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
     <main>
+        
         <section id="panales">
             <ul>
                 <li><a href="#pampers">Pampers</a></li>
@@ -81,7 +89,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="pampers" data-nombre="Pamper Deluxe Protección" data-precio="10000">Agregar al carrito</button>
                     </div>
 
                 </div>
@@ -111,7 +119,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                      <button class="comprar" data-id="pampers" data-nombre="Pamper Babysan" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -140,7 +148,8 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="pampers" data-nombre="Pamper Pant" data-precio="10000">Agregar al carrito</button>
+    
                     </div>
                 </div>
             </div>
@@ -174,7 +183,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                      <button class="comprar" data-id="pampers" data-nombre="Huggies Classic" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -189,7 +198,7 @@
                             <option value="P">P</option>
                             <option value="P">M</option>
                             <option value="P">G</option>
-                            <option value="P">XG</option>
+                            <option value="P">XG</option> 
                             <option value="P">XXG</option>
                         </select>
                     </div>
@@ -203,7 +212,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="huggies" data-nombre="Huggies Flexy Confort" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -232,7 +241,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Huggies Protect Plus" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -261,7 +270,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Huggies Natural Care" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -290,7 +299,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="pampers" data-nombre="Huggies Dermacare" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -323,7 +332,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Babysec Ultra Soft" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -352,7 +361,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Babysec Premiun Soft" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -385,7 +394,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Pañales Estrella" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -418,7 +427,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Duffy Premium Cotton" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
                 <div class="producto">
@@ -447,7 +456,7 @@
                     </div>
                     <div class="precio">Precio: $10000</div>
                     <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                         <button class="comprar" data-id="pampers" data-nombre="Duffy Cotton" data-precio="10000">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -461,7 +470,7 @@
       </div>
       <div class="enlaces-footer">
         <a href="./index.html">Inicio</a> |
-        <a href="./compra.html">¿Cómo comprar?</a> |
+        <a href="./info-compra.html">¿Cómo comprar?</a> |
         <a href="./contacto.html">Contacto</a> |
         <a href="./reseñas.html">Reseñas</a> 
       </div><br>
@@ -482,6 +491,7 @@
         </p>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

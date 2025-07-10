@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!--Creo que era iconos-->
-    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./css/estilos/estilo.css">
     <title>AnnVi-Pañalera online</title>
 </head>
 
@@ -40,6 +40,13 @@
       </div>
     </nav>
   </header>
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <p>Total: $<span id="total-carrito">0</span></p>
+    <ul id="lista-carrito"></ul>
+</div>
+<button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
     <main>
          <section id="panales">
             <ul>
@@ -57,7 +64,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. J&J Extra Cuidado x48" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -68,7 +75,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. J&J Limpieza y suavidas x44" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -78,7 +85,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. J&J Cabeza a los pies x44" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -89,7 +96,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Huggies triple protección x80" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -100,7 +107,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Huggies Manos y carita x32" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -110,7 +117,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Huggies TH Sirenita 4 en 1 x48" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -120,7 +127,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Kimbies Dnt 30 x48" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -129,8 +136,8 @@
                     <img src="./images/toall-hum-babysec-premium.png" alt="toa-babysec" class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+               <div>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Babysec Premium x50" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -140,8 +147,8 @@
                     <img src="./images/toall-hum-babysec-ultrafresh.jpeg" alt="toa-babysec-ultra" class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                 <div>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Babysec Ultra x50" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -152,7 +159,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Babysec Ultrafresch x150" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -163,7 +170,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Estrella Humec Sensible x50" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -174,7 +181,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Esttella Cuidado Diario x50" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -184,8 +191,8 @@
                         class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                 <div>
+                        <button class="comprar" data-id="toallitas" data-nombre="Toa. Hum. Esttella Cuidado Diario x50" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
         </div>
@@ -198,7 +205,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="oleo" data-nombre="Estrella Oleo Calcareo x500ml" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -207,8 +214,8 @@
                     <img src="./images/oleo-calcon-manzanilla.png" alt="oleo-calcon-manzanilla" class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-               <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                <div>
+                        <button class="comprar" data-id="oleo" data-nombre="Estrella Oleo mamzanilla x500ml" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -219,7 +226,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="oleo" data-nombre="Estrella oleo calc. E Algodónx500ml" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -229,7 +236,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="oleo" data-nombre="Florida Oleo calc. x250" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -238,8 +245,8 @@
                     <img src="./images/oleo-calc-flor-500ml.png" alt="oleo-cal-florida-500ml" class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+               <div>
+                        <button class="comprar" data-id="oleo" data-nombre="Florida Oleo calc. x500" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -250,7 +257,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="oleo" data-nombre="Baby basic Basic Oleo calc. x500cc" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -259,18 +266,8 @@
                     <img src="./images/oleo-calc-babybasic-1l.jpg" alt="oleo-cal-baby-basic-1l" class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
-                    </div>
-            </div>
-            <div class="producto">
-                <div class="subproducto">Baby basic Basic Oleo calc. x1lt</div>
-                <div>
-                    <img src="./images/oleo-calc-babybasic-1l.jpg" alt="oleo-cal-baby-basic-1l" class="imgproducto">
-                </div>
-                <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                 <div>
+                        <button class="comprar" data-id="oleo" data-nombre="Baby basic Basic Oleo calc. x1lt" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
         </div>
@@ -283,7 +280,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="algodon" data-nombre="Estrella algodón clásico x300g" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -292,8 +289,8 @@
                     <img src="./images/estrella-alg-100g.png" alt="estrella-alg-100g" class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                 <div>
+                        <button class="comprar" data-id="algodon" data-nombre="Estrella algodón SUPER x100g" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -303,7 +300,7 @@
                 </div>
                 <div class="precio">Precio: $10000</div>
                 <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+                        <button class="comprar" data-id="algodon" data-nombre="Estrella algodón Super x200g" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
             <div class="producto">
@@ -313,19 +310,8 @@
                         class="imgproducto">
                 </div>
                 <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
-                    </div>
-            </div>
-            <div class="producto">
-                <div class="subproducto">Doncella algodón Premiun Precortado x100g</div>
-                <div>
-                    <img src="./images/doncella-algod-prec-100mg.png" alt="doncella-algod-prec-100mg"
-                        class="imgproducto">
-                </div>
-                <div class="precio">Precio: $10000</div>
-                <div>
-                        <button class="boton-agregar">Agregar al carrito</button>
+               <div>
+                        <button class="comprar" data-id="algodon" data-nombre="Doncella algodón Premiun Precortado x100g" data-precio="5200">Agregar al carrito</button>
                     </div>
             </div>
         </div>
@@ -360,6 +346,7 @@
             </p>
         </div>
     </footer>
+     <script src="./js/script.js"></script>
 </body>
 
 </html>
