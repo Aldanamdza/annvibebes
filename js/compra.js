@@ -1,11 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const productos = JSON.parse(sessionStorage.getItem('productos')) || [];
-    const total = sessionStorage.getItem('total') || 0;
-    const totalNumerico = parseFloat(total) || 0;
-    const totalFormateado = totalNumerico.toFixed(2);
+    const total = parseFloat(sessionStorage.getItem('total')) || 0;
+    const detalle = document.getElementById("detalle");
+    const resumenHidden = document.getElementById("resumenCompra");
+    
+    if (productos.length === 0){
+        detalle.innerHTML = "<p>No hay productos en el carrito.</p>";
+    }
+    else {
+        let html = "<ul>";
+        let resumenTexto = "";
+        productos.forEach (producto => {
+            html +=`<li>${producto.nombre} - $ {producto.cantidad} u. - $$ {producto.precio * producto.cantidad}</li>`;
+            resumenTexto += `${producto.nombre} - ${prodictp.cantidad} u. $${producto.precio * producto.cantidad}/n;
+        })`;
+        html += `</ul><p><strong>Total: </strong> $$ {total.toFixed (2)}</p>`;
+        resumenTexto += `/nTOTAL: $$ {total.toFixed(2)}`;
 
-    const resumenDiv = document.getElementById("detalle");
+        detalle.innerHTML = html;
+        resumenHidden.value = resumenTexto;
+    }
+}
+});
+
+    /*const resumenDiv = document.getElementById("detalle");
 
     let resumenTextoHTML = "<h3>Resumen de tu Compra:</h3><br>";
 

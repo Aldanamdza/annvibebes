@@ -14,8 +14,6 @@ body {
   background-repeat: repeat;
 
 }
-
-
 .encabezado {
   display: flex;
   flex-direction: column;
@@ -62,6 +60,154 @@ body {
   padding: 3px;
 }
 
+.icono-carrito{
+  display: inline-block;
+  cursor: pointer;
+}
+.icono-carrito i {
+  font-size: 1.2rem;
+  color:#333;
+}
+.icono-carrito:hover{
+  color:#000;
+}
+.contador-car{
+position: absolute;
+top:-6px;
+right:-10px;
+background:crimson;
+color:white;
+border-radius: 50%;
+padding: 2px 6px;
+font-size: 0.7em;
+
+}
+/* Estilos base para el mensaje flotante (oculto por defecto) */
+.mensaje-flotante {
+    position: fixed; /* O 'absolute' si quieres que se desplace con un contenedor */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 2000; /* Asegura que esté por encima de otros elementos */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.mensaje-flotante.show {
+    opacity: 1;
+    visibility: visible;
+}
+#cart-dropdown {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 260px;
+  z-index: 100;
+  font-size: 0.9rem;
+  display: none;
+}
+
+#cart-dropdown.open {
+  display: block;
+}
+
+#cart-dropdown h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333;
+}
+.restar-cantidad, .sumar-cantidad {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.eliminar-del-carrito {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#lista-carrito li div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+}
+
+#lista-carrito li div span:first-child {
+    flex-grow: 1; /* Para que el texto del producto ocupe el espacio disponible */
+    margin-right: 10px; /* Espacio entre el texto del producto y los botones */
+}
+
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+#lista-carrito li {
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 4px;
+  color: #444;
+}
+
+#totalCarrito {
+  font-weight: bold;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cart-buttons button {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  background: #7cb342;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cart-buttons button:hover {
+  background: #689f38;
+}
+
+#contador-car {
+  background: crimson;
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  display: inline-block;
+}
+
 .recuadro {
   position:relative;
   display: flex;
@@ -94,7 +240,7 @@ body {
 
 .submenu {
   display: none;
-  position:static;
+  position:absolute;
   top: 100%;
   left: 0;
   background-color: #c2e9f6;
@@ -211,8 +357,9 @@ body {
   gap: 10px;
   justify-content: flex-start;
   margin-bottom: 30px;
-  margin-left: 15px;
-
+  margin-left: 0;
+  padding: 0 15px;
+  
 }
 
 .producto {
@@ -222,9 +369,11 @@ body {
   border-radius: 10px;
   padding: 15px;
   background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba (0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(33.33% - 20px);
   height: auto;
-  width: 300px;
+  max-width: 300px;
+  min-width:280px;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
@@ -260,45 +409,35 @@ body {
   color: black;
   font-weight: bold;
 }
-
-#talle1 {
-  font-family: 'Comic Neue', cursive;
-  height: 25px;
-  width: 50px;
-  border-radius: 4px;
-  border: 2px solid #c2e9f6;
-}
-
 .pack {
-  display: flex;
   font-family: 'Comic Neue', cursive;
-  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .option {
-  display: flex;
-  gap: 2px;
-  margin-bottom: 3px;
-  margin-top: 10px;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  justify-items: center;
 }
 
 .card-option {
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  padding: 4px 10px;
-  border: 2px solid #c2e9f6;
-  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   cursor: pointer;
-  text-align: center;
-  transition: all 0.3s ease;
-  width: 80px;
-}
-
-.card-option:hover {
-  border-color: #9e14e8;
   background-color: #f9f9f9;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 160px;
+  box-sizing: border-box;
 }
 
 .precio {
@@ -307,27 +446,6 @@ body {
   font-weight: bold;
   font-size: 1em;
 }
-
-.boton-agregar {
-  text-align: center;
-  gap: 10px;
-  font-family: 'Comic Neue', cursive;
-  width: 100px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  border: 1px solid #c2e9f6;
-  color: #222121;
-  font-size: 1rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0 0 0 0.1);
-  ;
-}
-
-.boton-agregar:hover {
-  background-color: #aad4f6;
-}
-
 .contacto-layout {
   display: flex;
   flex-wrap: wrap;
@@ -470,11 +588,12 @@ body {
   color: black;
   padding: 10px 15px;
   border-radius: 10%;
-  text-decoration: 20px;
+  text-decoration: none;
   z-index: 1000;
 }
 
-#panales ul {
+
+#paniales ul {
   list-style: none;
   padding: 0;
   margin: 20px 0;
@@ -484,7 +603,7 @@ body {
   margin-left: 20px;
 }
 
-#panales ul li a {
+#paniales ul li a {
   text-decoration: none;
   color: #222121;
   font-weight: bold;
@@ -494,9 +613,10 @@ body {
   transition: background-color 0.3s;
 }
 
-#panales ul li a:hover {
+#paniales ul li a:hover {
   background-color: #ddd;
 }
+
 
 @media (max-width:768px) {
   .logo-titulo {
@@ -535,12 +655,18 @@ body {
   }
 
   .submenu {
-    display: relative;
-    background-color: #eaf8fc;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    border-radius: 8px;
+    display: none;
+  position:static;
+  top: 100%;
+  left: 0;
+  background-color: #c2e9f6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  z-index: 1000;
+  border-radius: 9px;
+
   }
 
   .submenu li a {
@@ -561,7 +687,7 @@ body {
   }
 
   .producto {
-    width: 90%;
+    width: 80%;
     padding: 15px;
   }
 
@@ -574,7 +700,7 @@ body {
     height: 100px;
   }
 
-  .talls,
+  .talle,
   .precio,
   .boton-agregar {
     font-size: 1rem;
@@ -582,17 +708,22 @@ body {
   }
 
   .pack {
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
   }
-
-  .option {
-    flex-wrap: wrap;
-    justify-content: center;
+.option {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-items: center;
   }
 
   .card-option {
-    width: 100px;
+    width: 90px;
     margin-bottom: 5px;
   }
 
@@ -673,4 +804,13 @@ body {
     text-align: center;
     font-size: 0.9rem;
   }
+}
+.resenia{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding-top: 85px;
 }

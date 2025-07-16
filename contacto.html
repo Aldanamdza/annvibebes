@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="./estilo.css">
+  <link rel="stylesheet" href="./css/estilo.css">
   <title>AnnVi-Pañalera online</title>
 </head>
 
@@ -33,10 +33,22 @@
             <li><a href="./baño.html">Baño</a></li>
           </ul>
         </div>
-        <div><a href="./info-compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
+        <div><a href="./compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
         <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
         <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
+         <div class=" item icono-carrito" style="position: relative;" id="cart-icon">Carrito
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="contador-car" class="contador-car">0</span>
+      <div id="cart-dropdown" class="cart-dropdown">
+        <h3>Carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="totalCarrito">0</span></p>
+        <div class="cart-buttons"></div>
+        <button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
       </div>
+    </div>
+  </div>
     </nav>
   </header>
   <main class="contacto-layout">

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/fakestore.css"> <!-- Revisá la ruta a tu hoja de estilo -->
+    <title>FakStore API</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <!-- Inicio del li del carrito -->
+                    <li>
+                        <a href="#" id="icono-carrito" class="carrito-icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="contador-carrito" class="contador-carrito">0</span>
+                        </a>
+                    </li>
+                    <!-- Fin del li del carrito -->
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./api_resenia.html">Reseñas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="./ubicacion.html">Ubicación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Productos Disponibles</h1>
+    <div id="fakestore-container"></div>
+
+    <!-- Modal del Carrito -->
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="lista-carrito"></div>
+            <div id="total-carrito">Total: $0.00</div>
+            <div class="botones-carrito">
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="pagar">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/fakestore.js"></script> <!-- Revisa este enlace para asegurarte que coincide con la estructura de tus carpetas y archivos-->
+
+    <!-- Inicio de tu Footer-->
+
+    <!-- Fin de tu Footer-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

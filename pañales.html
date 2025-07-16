@@ -11,9 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="stylesheet" href="./css/estilos/estilo.css">
-    
+    <link rel="stylesheet" href="./css/estilo.css">
     <title>AnnVi-Pañalera online</title>
 </head>
 <body>
@@ -24,7 +22,7 @@
       <h1 class="titulo-pag">AnnVi Pañalera online</h1>
     </div>
     <h2 class="slogan">Cosas de bebé y más</h2>
-    <nav>
+   <nav>
       <div class="recuadro">
         <div><a href="./index.html" class="item"><b>Inicio</b></a></div>
         <div><a href="#" class="item"><b>Productos</b></a>
@@ -34,22 +32,27 @@
             <li><a href="./baño.html">Baño</a></li>
           </ul>
         </div>
-        <div><a href="./info-compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
+        <div><a href="./compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
         <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
         <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
+          <div class=" item icono-carrito" style="position: relative;" id="cart-icon">Carrito
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="contador-car" class="contador-car">0</span>
+      <div id="cart-dropdown" class="cart-dropdown">
+        <h3>Carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="totalCarrito">0</span></p>
+        <div class="cart-buttons"></div>
+        <button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
       </div>
+    </div>
+  </div>
+  <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
     </nav>
   </header>
-  <div id="carrito">
-    <h2>Carrito de Compras</h2>
-    <p>Total: $<span id="total-carrito">0</span></p>
-    <ul id="lista-carrito"></ul>
-</div>
-<button id="btnPagar">Pagar</button>
-<button id="vaciar-carrito">Vaciar Carrito</button>
     <main>
-        
-        <section id="panales">
+        <section id="paniales">
             <ul>
                 <li><a href="#pampers">Pampers</a></li>
                 <li><a href="#huggies">Huggies</a></li>
@@ -58,102 +61,115 @@
                 <li><a href="#duffy">Duffy</a></li>
             </ul>
         </section>
-       
-        <div>
-            <h3 class="subtit" id="pampers">Pampers</h3>
-            <br>
+            <h3 class="subtit" id="pampers">Pampers</h3>    
             <div class="grupo-productos">
                 <div class="producto">
                     <div class="subproducto">Pamper Deluxe Protección</div>
                     <div>
                         <img src="./images/pampers-deluxe-protection.png" alt="Deluxe Protection" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select><br>
-                    </div>
+                 
                     <div class="pack">
-                        <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                        <div class="option">                                                                                                    
+                            <div class="card-option" data-value="36" data-precio="22000">Talle P x 36unid
+                            <div class="precio">Precio: $22000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                        <button class="comprar" data-id="pampers" data-nombre="Pamper Deluxe Protección" data-precio="10000">Agregar al carrito</button>
+                         <div class="card-option" data-value="72" data-precio="28500">Talle M x 72unid
+                            <div class="precio">Precio: $28500</div>
+                        </div>
+                        <div class="card-option" data-value="72" data-precio="28500">Talle G x 72unid
+                            <div class="precio">Precio: $28500</div>
+                        </div>
+                        <div class="card-option" data-value="110" data-precio="40000">Talle G x 110unid
+                            <div class="precio">Precio: $40000</div>
+                        </div>
+                         <div class="card-option" data-value="58" data-precio="28500">Talle XG x 58unid
+                            <div class="precio">Precio: $40000</div>
+                        </div>
+                        <div class="card-option" data-value="96" data-precio="44000">Talle XG x 96unid
+                            <div class="precio">Precio: $44000</div>
+                        </div>
+                        <div class="card-option" data-value="54" data-precio="28500">Talle XXG x 96unid
+                            <div class="precio">Precio: $28500</div>
+                        </div>
+                        <div class="card-option" data-value="88" data-precio="42000">Talle XXG x 88unid
+                            <div class="precio">Precio: $42000</div>
+                        </div>
+                    <input type="hidden" name="opciones" id="opcion-pampers-deluxe">
+                    <input type="hidden" name="precio" id="precio-pampers-deluxe">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="pampers-deluxe-protection" data-nombre="Pamper Deluxe Protección" data-precio="">Agregar al carrito</button>
                     </div>
 
-                </div>
                 <div class="producto">
                     <div class="subproducto">Pamper Babysan</div>
                     <div>
-                        <img src="./images/pampers-babysan.png" alt="pampers-babysan" class="imgproducto">
+                       <img src="./images/pampers-babysan.png" alt="pampers-babysan" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+                  
                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                            <div class="card-option" data-value="52" data-precio="13500">Talle P x 36unid
+                            <div class="precio">Precio: $13500</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
+                         <div class="card-option" data-value="72" data-precio="22500">Talle M x 72unid
+                            <div class="precio">Precio: $22500</div>
+                        </div>
+                        <div class="card-option" data-value="72" data-precio="22500">Talle G x 72unid
+                            <div class="precio">Precio: $22500</div>
+                        </div>
+                         <div class="card-option" data-value="58" data-precio="22500">Talle XG x 58unid
+                            <div class="precio">Precio: $22500</div>
+                        </div>
+                        <div class="card-option" data-value="54" data-precio="22500">Talle XXG x 96unid
+                            <div class="precio">Precio: $22500</div>
+                        </div>
+                       <input type="hidden" name="opciones" id="precio-pampers-babysan">
+                    <input type="hidden" name="precio" id="precio-pampers-babysan">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="pampers-babysan" data-nombre="Pamper Babysan" data-precio="13500">Agregar al carrito</button>
                     </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                      <button class="comprar" data-id="pampers" data-nombre="Pamper Babysan" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
                 <div class="producto">
                     <div class="subproducto">Pamper Pant</div>
                     <div>
                         <img src="./images/pampers-pant.jpg" alt="pampers-pant" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+               
                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                         <div class="card-option" data-value="34" data-precio="16500">Talle M x 34unid
+                            <div class="precio">Precio: $16500</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                        <button class="comprar" data-id="pampers" data-nombre="Pamper Pant" data-precio="10000">Agregar al carrito</button>
-    
+                        <div class="card-option" data-value="30" data-precio="16500">Talle G x 30unid
+                            <div class="precio">Precio: $28500</div>
+                        </div>
+                        <div class="card-option" data-value="64" data-precio="30000">Talle G x 64unid
+                            <div class="precio">Precio: $40000</div>
+                        </div>
+                         <div class="card-option" data-value="26" data-precio="16500">Talle XG x 26unid
+                            <div class="precio">Precio: $16500</div>
+                        </div>
+                        <div class="card-option" data-value="52" data-precio="29000">Talle XG x 52unid
+                            <div class="precio">Precio: $29000</div>
+                        </div>
+                        <div class="card-option" data-value="24" data-precio="17000">Talle XXG x 24unid
+                            <div class="precio">Precio: $17000</div>
+                        </div>
+                        <div class="card-option" data-value="52" data-precio="29000">Talle XXG x 52unid
+                            <div class="precio">Precio: $29000</div>
+                        </div>
+                        <div class="card-option" data-value="46" data-precio="29000">Talle XXXG x 46unid
+                            <div class="precio">Precio: $29000</div>
+                        </div>
+                    <input type="hidden" name="opciones" id="precio-pampers-pant">
+                    <input type="hidden" name="precio" id="precio-pampers-pant">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="pampers-pant" data-nombre="Pamper Pant" data-precio="16500">Agregar al carrito</button>
                     </div>
                 </div>
-            </div>
-
             <h3 class="subtit" id="huggies">Huggies</h3>
             <br>
             <div class="grupo-productos">
@@ -162,209 +178,236 @@
                     <div>
                         <img src="./images/huggies-clasic.png" alt="huggies-clasic" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+                    
                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                            <div class="card-option" data-value="30" data-precio="7000">Talle P x 30unid
+                            <div class="precio">Precio: $7000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
+                         <div class="card-option" data-value="68" data-precio="16300">Talle M x 68unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        <div class="card-option" data-value="60" data-precio="16300">Talle G x 60unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        
+                         <div class="card-option" data-value="52" data-precio="16300">Talle XG x 52unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        
+                        <div class="card-option" data-value="50" data-precio="16300">Talle XXG x 50unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        <div class="card-option" data-value="48" data-precio="16300">Talle XXXG x 48unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                    <input type="hidden" name="opciones" id="precio-huggies-clasicc">
+                    <input type="hidden" name="precio" id="precio-huggies-clasicc">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="huggies-clasicc" data-nombre="huggies-clasic" data-precio="16500">Agregar al carrito</button>
                     </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                      <button class="comprar" data-id="pampers" data-nombre="Huggies Classic" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
                 <div class="producto">
                     <div class="subproducto">Huggies Flexy Confort</div>
                     <div>
                         <img src="./images/huggies-flexy-confort.jpg" alt="huggies-flexy-confort" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option> 
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
-                    <div class="pack">
+                    
+                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                            <div class="card-option" data-value="30" data-precio="7000">Talle P x 30unid
+                            <div class="precio">Precio: 7000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                        <button class="comprar" data-id="huggies" data-nombre="Huggies Flexy Confort" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
+                         <div class="card-option" data-value="68" data-precio="17200">Talle M x 68unid
+                            <div class="precio">Precio: 17200</div>
+                        </div>
+                         <div class="card-option" data-value="32" data-precio="11200">Talle XG x 32unid
+                            <div class="precio">Precio: 11200</div>
+                        </div>
+                        <div class="card-option" data-value="52" data-precio="17200">Talle XG x 52unid
+                            <div class="precio">Precio: 17200</div>
+                        </div>
+                        <div class="card-option" data-value="50" data-precio="17200">Talle XXG x 50unid
+                            <div class="precio">Precio: 17200</div>
+                        </div>
+                        <div class="card-option" data-value="30" data-precio="16300">Talle XXXG x 30unid
+                            <div class="precio">Precio: 11200</div>
+                        </div>
+                    <input type="hidden" name="opciones" id="precio-huggies-flexy-confort">
+                    <input type="hidden" name="precio" id="precio-huggies-flexy-confort">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="huggies-flexy-confort" data-nombre="huggies-flexy-confort" data-precio="16500">Agregar al carrito</button>
+                                   </div>
                 <div class="producto">
                     <div class="subproducto">Huggies Protect Plus</div>
                     <div>
                         <img src="./images/huggies-protect-plus.png" alt="huggies-protect-plus" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+                    
                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                            <div class="card-option" data-value="30" data-precio="7000">Talle P x 30unid
+                            <div class="precio">Precio: $7000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Huggies Protect Plus" data-precio="10000">Agregar al carrito</button>
-                    </div>
+                         <div class="card-option" data-value="68" data-precio="20000">Talle M x 68unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        <div class="card-option" data-value="60" data-precio="16300">Talle G x 60unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        
+                         <div class="card-option" data-value="52" data-precio="16300">Talle XG x 52unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        
+                        <div class="card-option" data-value="50" data-precio="16300">Talle XXG x 50unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                        <div class="card-option" data-value="48" data-precio="16300">Talle XXXG x 48unid
+                            <div class="precio">Precio: $16300</div>
+                        </div>
+                    <input type="hidden" name="opciones" id="precio-huggies-protec-plus">
+                    <input type="hidden" name="precio" id="precio-huggies-protec-plus">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="huggies-protec-plus" data-nombre="huggies-protec-plus" data-precio="7000">Agregar al carrito</button>
+                 
                 </div>
                 <div class="producto">
                     <div class="subproducto">Huggies Natural Care</div>
                     <div>
                         <img src="./images/huggies-nat-care.png" alt="huggies-nat-care" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+            
                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                         <div class="card-option" data-value="68" data-precio="22000">Talle M x 68unid
+                            <div class="precio">Precio: $22000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Huggies Natural Care" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="producto">
+                        <div class="card-option" data-value="60" data-precio="22000">Talle G x 60unid
+                            <div class="precio">Precio: $22000</div>
+                        </div>
+                        
+                         <div class="card-option" data-value="52" data-precio="22000">Talle XG x 52unid
+                            <div class="precio">Precio: $22000</div>
+                        </div>
+                        <div class="card-option" data-value="100" data-precio="44100">Talle XG x 100unid
+                            <div class="precio">Precio: $44100</div>
+                        </div>
+                        <div class="card-option" data-value="50" data-precio="22000">Talle XXG x 50unid
+                            <div class="precio">Precio: $22000</div>
+                        </div>
+                         <div class="card-option" data-value="96" data-precio="44100">Talle XXG x 96unid
+                            <div class="precio">Precio: $44100</div>
+                        </div>
+                        <div class="card-option" data-value="48" data-precio="22000">Talle XXXG x 48unid
+                            <div class="precio">Precio: $22000</div>
+                        </div>
+                        <div class="card-option" data-value="92" data-precio="44100">Talle XXXG x 92unid
+                            <div class="precio">Precio: $44100</div>
+                        </div>
+                    <input type="hidden" name="opciones" id="precio-huggies-natural-care">
+                    <input type="hidden" name="precio" id="precio-huggies-natural-care">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="huggies-natural-care" data-nombre="huggies-natural-care" data-precio="22000">Agregar al carrito</button>
+</div>
+                   <div class="producto">
                     <div class="subproducto">Huggies Dermacare</div>
                     <div>
                         <img src="./images/huggies-dermacare.png" alt="huggies-dermacare" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+                  
                     <div class="pack">
                         <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                         <div class="card-option" data-value="58" data-precio="20000">Talle M x 58unid
+                            <div class="precio">Precio: $20000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                        <button class="comprar" data-id="pampers" data-nombre="Huggies Dermacare" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
+                        <div class="card-option" data-value="48" data-precio="19000">Talle G x 48unid
+                            <div class="precio">Precio: $19000</div>
+                        </div>
+                        
+                         <div class="card-option" data-value="38" data-precio="19000">Talle XG x 38unid
+                            <div class="precio">Precio: $19000</div>
+                         </div>
+                    <input type="hidden" name="opciones" id="precio-huggies-dermacare">
+                    <input type="hidden" name="precio" id="precio-huggies-dermacare">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="huggies-dermacare" data-nombre="huggies-dermacare" data-precio="20000">Agregar al carrito</button>
+               </div>
+            </div>                  
            <h3 class="subtit" id="babysec">Babysec</h3>
-           <br>
+     
             <div class="grupo-productos">
                 <div class="producto">
                     <div class="subproducto">Babysec Ultra Soft</div>
                     <div>
                         <img src="./images/babysec-ultra-soft.png" alt="babysec-ultra-soft" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
-                    <div class="pack">
-                        <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                   <div class="pack">
+                   <div class="option">
+                         <div class="card-option" data-value="68" data-precio="14500">Talle M x 68unid
+                            <div class="precio">Precio: $14500</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Babysec Ultra Soft" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
+                        <div class="card-option" data-value="60" data-precio="14500">Talle G x 60unid
+                            <div class="precio">Precio: $14500</div>
+                        </div>
+                         <div class="card-option" data-value="32" data-precio="9500">Talle XG x 32unid
+                            <div class="precio">Precio: $9500</div>
+                        </div>                    
+                         <div class="card-option" data-value="52" data-precio="14500">Talle XG x 52unid
+                            <div class="precio">Precio: $14500</div>
+                        </div>                    
+                        <div class="card-option" data-value="30" data-precio="9500">Talle XXG x 30unid
+                            <div class="precio">Precio: $9500</div>
+                        </div>
+                         <div class="card-option" data-value="50" data-precio="14500">Talle XXG x 50unid
+                            <div class="precio">Precio: $44100</div>
+                        </div>                
+                    <input type="hidden" name="opciones" id="precio-babysec-ultra-soft">
+                    <input type="hidden" name="precio" id="precio-babysec-ultra-soft">
+                   </div>
+                     </div>
+                     <button class="comprar" data-id="babysec-ultra-soft" data-nombre="babysec-ultra-soft" data-precio="14500">Agregar al carrito</button>
+                         </div>       
                 <div class="producto">
                     <div class="subproducto">Babysec Premiun Soft</div>
                     <div>
                         <img src="./images/babysec-premiun-soft.jpg" alt="babysec-premiun-soft" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
-                    <div class="pack">
-                        <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+             
+                      <div class="pack">
+                   <div class="option">
+                         <div class="card-option" data-value="48" data-precio="10800">Talle M x 48unid
+                            <div class="precio">Precio: $10800</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Babysec Premiun Soft" data-precio="10000">Agregar al carrito</button>
+                         <div class="card-option" data-value="40" data-precio="10800">Talle G x 40unid
+                            <div class="precio">Precio: $10800</div>
+                        </div>
+                        <div class="card-option" data-value="60" data-precio="15400">Talle G x 60unid
+                            <div class="precio">Precio: $15400</div>
+                        </div>
+                        <div class="card-option" data-value="32" data-precio="10800">Talle XG x 32unid
+                            <div class="precio">Precio: $10800</div>
+                        </div> 
+                         <div class="card-option" data-value="48" data-precio="15400">Talle XG x 48unid
+                            <div class="precio">Precio: $15400</div>
+                        </div>                    
+                        <div class="card-option" data-value="44" data-precio="15400">Talle XXG x 44unid
+                            <div class="precio">Precio: $15400</div>
+                        </div>
+                         <div class="card-option" data-value="30" data-precio="14500">Talle XXG x 30unid
+                            <div class="precio">Precio: $10800</div>
+                        </div>                               
+                    <input type="hidden" name="opciones" id="precio-babysec-premiun-soft">
+                    <input type="hidden" name="precio" id="precio-babysec-premiun-soft">
+                  </div>
+                     </div>                 
+                        <button class="comprar" data-id="babysec-premiun-soft" data-nombre="babysec-premiun-soft">Agregar al carrito</button>
                     </div>
                 </div>
-            </div>
             <h3 class="subtit" id="estrella">Estrella</h3>
             <br>
             <div class="grupo-productos">
@@ -373,31 +416,41 @@
                     <div>
                         <img src="./images/pañales-estrellas.png" alt="pañales-estrellas" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
-                   <div class="pack">
-                        <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+          
+                     <div class="pack">
+                   <div class="option">
+                    <div class="card-option" data-value="30" data-precio="7000">Talle P x 30unid
+                            <div class="precio">Precio: $7000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Pañales Estrella" data-precio="10000">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
+                         <div class="card-option" data-value="44" data-precio="10100">Talle M x 44unid
+                            <div class="precio">Precio: $10100</div>
+                        </div>
+                         <div class="card-option" data-value="40" data-precio="10100">Talle G x 40unid
+                            <div class="precio">Precio: $10100</div>
+                        </div>
+                        <div class="card-option" data-value="60" data-precio="16000">Talle G x 60unid
+                            <div class="precio">Precio: $16000</div>
+                        </div>
+                        <div class="card-option" data-value="36" data-precio="10100">Talle XG x 36unid
+                            <div class="precio">Precio: $10100</div>
+                        </div> 
+                         <div class="card-option" data-value="52" data-precio="16000">Talle XG x 52unid
+                            <div class="precio">Precio: $16000</div>
+                        </div>                    
+                        <div class="card-option" data-value="34" data-precio="10100">Talle XXG x 34unid
+                            <div class="precio">Precio: $10100</div>
+                        </div>
+                         <div class="card-option" data-value="50" data-precio="16000">Talle XXG x 50unid
+                            <div class="precio">Precio: $16000</div>
+                        </div>                                 
+                    <input type="hidden" name="opciones" id="precio-pañales-estrellas">
+                    <input type="hidden" name="precio" id="precio-pañales-estrellas">
+                   </div>
+                     </div>
+                        <button class="comprar" data-id="pañales-estrella" data-nombre="pañales-estrella" data-precio="10100">Agregar al carrito</button>
+                                          </div>
+                      </div>
+              
             <h3 class="subtit" id="duffy">Duffy</h3>
             <br>
             <div class="grupo-productos">
@@ -406,61 +459,58 @@
                     <div>
                         <img src="./images/duffy-premium-cotton.jpeg" alt="duffy-premium-cotton" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+                
                     <div class="pack">
-                        <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                    <div class="option">
+                    
+                         <div class="card-option" data-value="40" data-precio="11100">Talle M x 40unid
+                            <div class="precio">Precio: $11000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Duffy Premium Cotton" data-precio="10000">Agregar al carrito</button>
-                    </div>
+                         <div class="card-option" data-value="36" data-precio="11100">Talle G x 36unid
+                            <div class="precio">Precio: $11100</div>
+                        </div>                     
+                        <div class="card-option" data-value="32" data-precio="11100">Talle XG x 32unid
+                            <div class="precio">Precio: $11100</div>
+                        </div> 
+                                                                
+                        <div class="card-option" data-value="30" data-precio="11100">Talle XXG x 30unid
+                        </div>
+                    
+                    <input type="hidden" name="opciones" id="precio-duffy-cotton">
+                    <input type="hidden" name="precio" id="precio-duffy-cotton">
+                      </div>
+                     </div>
+                        <button class="comprar" data-id="duffy-cotton" data-nombre="duffy-cotton" data-precio="11100">Agregar al carrito</button>
                 </div>
                 <div class="producto">
                     <div class="subproducto">Duffy Cotton</div>
                     <div>
                         <img src="./images/duffy-cotton.png" alt="duffy-cotton" class="imgproducto">
                     </div>
-                    <br>
-                    <div class="talles">Talle:</div>
-                    <div>
-                        <select id="talle1" name="talle">
-                            <option value="P">P</option>
-                            <option value="P">M</option>
-                            <option value="P">G</option>
-                            <option value="P">XG</option>
-                            <option value="P">XXG</option>
-                        </select>
-                    </div>
+                    
                     <div class="pack">
-                        <div class="option">
-                            <div class="card-option" data-value="48">Pack por 48u</div>
-                            <div class="card-option" data-value="72">Pack por 72u</div>
+                    <div class="option">
+                    
+                         <div class="card-option" data-value="52" data-precio="11000">Talle M x 52unid
+                            <div class="precio">Precio: $11000</div>
                         </div>
-                        <input type="hidden" name="opciones" id="opcionSeleccionada">
-                        <br>
-                    </div>
-                    <div class="precio">Precio: $10000</div>
-                    <div>
-                         <button class="comprar" data-id="pampers" data-nombre="Duffy Cotton" data-precio="10000">Agregar al carrito</button>
+                         <div class="card-option" data-value="48" data-precio="11800">Talle G x 48unid
+                            <div class="precio">Precio: $11800</div>
+                        </div>                     
+                        <div class="card-option" data-value="44" data-precio="11800">Talle XG x 44unid
+                            <div class="precio">Precio: $11800</div>
+                        </div>                                                                 
+                        <div class="card-option" data-value="42" data-precio="11800">Talle XXG x 42unid
+                            <div class="precio">Precio: $11800</div>
+                        </div>                    
+                    <input type="hidden" name="opciones" id="precio-duffy-cotton">
+                    <input type="hidden" name="precio" id="precio-duffy-cotton">
+                     </div>
+                      </div>
+                        <button class="comprar" data-id="duffy-cotton" data-nombre="duffy-cotton" data-id="11000">Agregar al carrito</button>
                     </div>
                 </div>
-            </div>
-    </main>
+              </main>
     <section><a href="#subir" class="boton-arriba">Volver arriba</a></section>
      <footer class="pie">
       <div class="horarios">
@@ -472,7 +522,7 @@
         <a href="./index.html">Inicio</a> |
         <a href="./info-compra.html">¿Cómo comprar?</a> |
         <a href="./contacto.html">Contacto</a> |
-        <a href="./reseñas.html">Reseñas</a> 
+        <a href="./reseñas.html">Reseñas</a>
       </div><br>
       <p class="eslogan-footer">“Cuidamos lo que más amás”</p><br>
       <div class="redes">
@@ -483,7 +533,6 @@
         <a href="https://wa.me/5491123456789" target="_blank" aria-label="WhatsApp"><i
             class="fa-brands fa-whatsapp"></i></a>
           <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASKV5MiLRbLRIM3bGabY4mB5Nizb_lZvbmkiTxeDLehPtU3KAuYOKaonhSail71RxmwNAjFh4K9bzA&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-787890299%3A1748049857357338" target="_blank" aria-label="WhatsApp"><i class="fa-regular fa-envelope"></i></a>
-    
       </div><br>
       <div class="creditos">
         <p>Desarrollado por: Aldana Mendoza - 2025 |
@@ -493,5 +542,4 @@
     </footer>
     <script src="./js/script.js"></script>
 </body>
-
 </html>

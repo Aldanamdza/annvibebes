@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!--Creo que era iconos-->
-    <link rel="stylesheet" href="./css/estilos/estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css">
     <title>AnnVi-Pañalera online</title>
 </head>
 
@@ -24,7 +24,7 @@
       <h1 class="titulo-pag">AnnVi Pañalera online</h1>
     </div>
     <h2 class="slogan">Cosas de bebé y más</h2>
-    <nav>
+   <nav>
       <div class="recuadro">
         <div><a href="./index.html" class="item"><b>Inicio</b></a></div>
         <div><a href="#" class="item"><b>Productos</b></a>
@@ -37,18 +37,24 @@
         <div><a href="./compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
         <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
         <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
+          <div class=" item icono-carrito" style="position: relative;" id="cart-icon">Carrito
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="contador-car" class="contador-car">0</span>
+      <div id="cart-dropdown" class="cart-dropdown">
+        <h3>Carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="totalCarrito">0</span></p>
+        <div class="cart-buttons"></div>
+        <button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
       </div>
+    </div>
+  </div>
     </nav>
   </header>
-  <div id="carrito">
-    <h2>Carrito de Compras</h2>
-    <p>Total: $<span id="total-carrito">0</span></p>
-    <ul id="lista-carrito"></ul>
-</div>
-<button id="btnPagar">Pagar</button>
-<button id="vaciar-carrito">Vaciar Carrito</button>
+
     <main>
-         <section id="panales">
+         <section id="paniales">
             <ul>
                 <li><a href="#taollitas">Toallitas humedas</a></li>
                 <li><a href="#oleo">Oleo Calcareo</a></li>
