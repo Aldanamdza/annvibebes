@@ -35,8 +35,8 @@
         </div>
         <div><a href="./compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
         <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
-        <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
-         <div class=" item icono-carrito" style="position: relative;" id="cart-icon">Carrito
+         <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
+          <div class=" item" id="cart-icon">Carrito
       <i class="fa-solid fa-cart-shopping"></i>
       <span id="contador-car" class="contador-car">0</span>
       <div id="cart-dropdown" class="cart-dropdown">
@@ -49,42 +49,18 @@
       </div>
     </div>
   </div>
+  <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
     </nav>
   </header>
   <main>
  <h3 class="subtit">Reseñas de nuestros clientes</h3>
- <section class="grid-reseñas">
- <div class="reseñas">
-    <p class="cliente-nombre">Ana Lopez</p>
-    <div class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="comentario">¡Me encanto la atención y la variedad de productos!. Volveré a comprar sin dudas.</div>
- </div>
- <div class="reseñas">
-    <p class="cliente-nombre">Paula Dias</p>
-    <div class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-    <div class="comentario">Entrega rápida, me llegó todo muy bien</div>
- </div>
- <div class="reseñas">
-    <p class="cliente-nombre">Juan León</p>
-    <div class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="comentario">Excelente calidad de los pañales, y productos de higiene</div>
- </div>
- <div class="reseñas">
-    <p class="cliente-nombre">Victoria Paz</p>
-    <div class="estrellas">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
-    <div class="comentario">Buena atención, pero el envio tardó un poco más de lo esperado</div>
- </div>
- <div class="reseñas">
-    <p class="cliente-nombre">Valeria Perez</p>
-    <div class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-    <div class="comentario">Todo llegó en perfecto estado. Me gustaría más opciones de pago, que sea más directo</div>
- </div>
- <div class="reseñas">
-    <p class="cliente-nombre">Sofia Mendez</p>
-    <div class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-    <div class="comentario">Me atendieron rápido por Whatsapp, aunque el proceso de pago fue lento pero seguro.</div>
- </div>
- </section>
+  <section class="resenia">
+        <div class="container my-4 text-center"></div>
+        <div class="mt-2 grid-reseñas" id="contenido">
+  
+        </div>
+  
+    </section>
   </main>
    <section><a href="#subir" class="boton-arriba">Volver arriba</a></section>
   <footer class="pie">
@@ -96,9 +72,9 @@
       <div class="enlaces-footer">
         <a href="./index.html">Inicio</a> |
         
-        <a href="./compra.html">¿Cómo comprar?</a> |
+        <a href="./info-compra.html">¿Cómo comprar?</a> |
         <a href="./contacto.html">Contacto</a> |
-        <a href="./reseñas.html">Reseñas</a>
+         <a href="./reseñas.html">Reseñas</a>
       </div><br>
       <p class="eslogan-footer">“Cuidamos lo que más amás”</p><br>
       <div class="redes">
@@ -108,7 +84,8 @@
             class="fa-brands fa-facebook"></i></a>
         <a href="https://wa.me/5491123456789" target="_blank" aria-label="WhatsApp"><i
             class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASKV5MiLRbLRIM3bGabY4mB5Nizb_lZvbmkiTxeDLehPtU3KAuYOKaonhSail71RxmwNAjFh4K9bzA&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-787890299%3A1748049857357338" target="_blank" aria-label="WhatsApp"><i class="fa-regular fa-envelope"></i></a>
+         <a href="mailto:aldanayamilamendoza@gmail.com" target="_blank" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+    
       </div><br>
       <div class="creditos">
         <p>Desarrollado por: Aldana Mendoza - 2025 |
@@ -116,5 +93,9 @@
         </p>
       </div>
     </footer>
+    <script src="./js/reseñas-api.js"></script>
+    <script>
+  traer();
+</script>
 </body>
 </html>

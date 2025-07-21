@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/estilo.css">
-  <title>AnnVi Pañalera online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>AnnVi-Pañalera online</title>
 </head>
 <body>
-  <header id="inicio" class="encabezado">
+     <section id="subir"></section>
+   <header id="inicio" class="encabezado">
     <div class="logo-titulo">
       <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
       <h1 class="titulo-pag">AnnVi Pañalera online</h1>
     </div>
     <h2 class="slogan">Cosas de bebé y más</h2>
-
-    <section id="subir"></section>
+   <nav>
+      <div class="recuadro">
+        <div><a href="./index.html" class="item"><b>Inicio</b></a></div>
+        <div><a href="#" class="item"><b>Productos</b></a>
+          <ul class="submenu">
+            <li><a href="./pañales.html">Pañales</a></li>
+            <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
+            <li><a href="./baño.html">Baño</a></li>
+          </ul>
+        </div>
+        <div><a href="./info-compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
+        <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
+        <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
+         
+  </div>
+  <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
+    </nav>
   </header>
    <h3 class="subtit" id="resumen">Resumen de compra</h3>
     <main>
-        <section>
+        <section class="cuadro-resumen">
             <div id="detalle"></div>
-        </section>
+      
     <form id="formulario" action="https://formspree.io/f/xwpovbvr" method="POST">
-
-        <br>
 
         <label>Nombre completo</label>
         <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required><br>
@@ -40,8 +56,8 @@
         <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
         <br><br>
         <button type="submit" id="botonEnviar">Enviar solicitud de compra</button>
-    </form>
- <footer class="pie">
+    </form> </section>
+  <footer class="pie">
       <div class="horarios">
         <p><strong>Horarios de atención</strong></p>
         <p>Lunes a Viernes de 8 a 20hs</p>
@@ -49,7 +65,8 @@
       </div>
       <div class="enlaces-footer">
         <a href="./index.html">Inicio</a> |
-        <a href="./compra.html">¿Cómo comprar?</a> |
+        
+        <a href="./info-compra.html">¿Cómo comprar?</a> |
         <a href="./contacto.html">Contacto</a> |
          <a href="./reseñas.html">Reseñas</a>
       </div><br>
@@ -61,7 +78,8 @@
             class="fa-brands fa-facebook"></i></a>
         <a href="https://wa.me/5491123456789" target="_blank" aria-label="WhatsApp"><i
             class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASKV5MiLRbLRIM3bGabY4mB5Nizb_lZvbmkiTxeDLehPtU3KAuYOKaonhSail71RxmwNAjFh4K9bzA&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-787890299%3A1748049857357338" target="_blank" aria-label="WhatsApp"><i class="fa-regular fa-envelope"></i></a>
+         <a href="mailto:aldanayamilamendoza@gmail.com" target="_blank" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+    
       </div><br>
       <div class="creditos">
         <p>Desarrollado por: Aldana Mendoza - 2025 |
@@ -69,7 +87,7 @@
         </p>
       </div>
     </footer>
-    <script src="./js/compra.js">
+    <script src="./js/script.js">
   </script>
 </body>
 

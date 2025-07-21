@@ -8,7 +8,7 @@ body {
   background-position: center;
   background-size: auto;
   font-family: "Comic Neue", cursive;
-  background-color:#efe0fb;
+  background-color:#fdf8fb;
   color: #555555;
   margin: 0px;
   background-repeat: repeat;
@@ -22,7 +22,7 @@ body {
   color: #7009ee;
   padding: 2px;
   font-family: "Comic Neue", cursive;
-  background-color: #dfb8f3;
+  background-color: #e6d1f0;
 }
 
 .logo-titulo {
@@ -66,7 +66,7 @@ body {
 }
 .icono-carrito i {
   font-size: 1.2rem;
-  color:#333;
+  color: #0b0b0b;
 }
 .icono-carrito:hover{
   color:#000;
@@ -82,35 +82,37 @@ padding: 2px 6px;
 font-size: 0.7em;
 
 }
-/* Estilos base para el mensaje flotante (oculto por defecto) */
+
 .mensaje-flotante {
-    position: fixed; /* O 'absolute' si quieres que se desplace con un contenedor */
-    bottom: 20px; /* Distancia desde la parte inferior */
-    right: 20px; /* Distancia desde la parte derecha */
-    background-color: #4CAF50; /* Color de fondo verde */
-    color: white; /* Color del texto */
-    padding: 15px 20px;
-    border-radius: 5px;
-    z-index: 2000; /* Asegura que esté por encima de otros elementos */
+    position:fixed;
+   border-radius: 8px;
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 15px;
+  top: 50%;
+  left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .mensaje-flotante.show {
     opacity: 1;
     visibility: visible;
 }
 #cart-dropdown {
+  display: flex;
   position: absolute;
   top: 130%;
   right: 0;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 260px;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(10, 10, 10, 0.2);
+ width: 500px;
   z-index: 100;
   font-size: 0.9rem;
   display: none;
@@ -124,13 +126,14 @@ font-size: 0.7em;
   margin-top: 0;
   font-size: 1.1rem;
   text-align: center;
-  color: #333;
+  color: #0f0f0f;
+
 }
 .restar-cantidad, .sumar-cantidad {
     background: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 3px 8px;
+    padding: 3px 6px;
     cursor: pointer;
 }
 
@@ -138,21 +141,25 @@ font-size: 0.7em;
     background: red;
     color: white;
     border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
+    border-radius: 2.5px;
+    padding: 4px 6px;
     cursor: pointer;
+    margin:3px;
+     transition: background 0.2s;
 }
 
 #lista-carrito li div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+    flex-wrap: nowrap;
+    gap:8px;
+    flex-direction: wrap;
 }
 
 #lista-carrito li div span:first-child {
-    flex-grow: 1; /* Para que el texto del producto ocupe el espacio disponible */
-    margin-right: 10px; /* Espacio entre el texto del producto y los botones */
+    flex-grow: 1; 
+    margin-right: 10px; 
 }
 
 
@@ -168,7 +175,7 @@ font-size: 0.7em;
   margin-bottom: 6px;
   border-bottom: 1px dashed #ccc;
   padding-bottom: 4px;
-  color: #444;
+  color: #0b0b0b;
 }
 
 #totalCarrito {
@@ -177,7 +184,7 @@ font-size: 0.7em;
 
 .cart-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 10px;
 }
 
@@ -281,6 +288,109 @@ font-size: 0.7em;
 
 }
 
+.cuadro-resumen {
+    padding: 20px;
+    max-width: 800px; 
+    margin: 20px auto; 
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    font-family: 'Comic Neue', cursive;
+    color: #555555;
+}
+
+
+
+.subtit#resumen { 
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+    color: #9308f7; 
+    font-size: 2.5rem; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+
+#detalle {
+    min-height: 150px;
+    border: 2px dashed #dfb8f3;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #fcf6ff; 
+    color: #333333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#detalle p {
+    margin-bottom: 8px;
+}
+
+#detalle strong {
+    color: #7009ee; 
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px;
+    border: 2px solid #dfb8f3; 
+    border-radius: 12px;
+    background-color: #f3f0f9; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra ligera */
+}
+
+#formulario label {
+    font-weight: bold;
+    color: #7009ee; /* Color morado para las etiquetas */
+    font-size: 1.1rem;
+    margin-bottom: 5px; /* Pequeño espacio debajo de la etiqueta */
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #d6d6e0; 
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#formulario input:focus {
+    border-color: #b57edc;
+    outline: none;
+    box-shadow: 0 0 8px rgba(181, 126, 220, 0.3); 
+}
+
+
+#botonEnviar {
+    background-color: #7009ee;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; 
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#botonEnviar:hover {
+    background-color: #5a07c4; 
+    transform: translateY(-2px); 
+}
+
+
 .contenido-principal {
   text-align: center;
   position: relative;
@@ -373,9 +483,10 @@ font-size: 0.7em;
   flex-basis: calc(33.33% - 2px);
   height: 500px;
   max-width: 600px;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
   gap: 5px;
+
 }
 
 
@@ -386,6 +497,7 @@ font-size: 0.7em;
   font-size: 2.2em;
   color: #b57edc;
   font-weight: bold;
+  margin-bottom: 5x;
 }
 
 .imgproducto {
@@ -403,6 +515,7 @@ font-size: 0.7em;
   flex-direction: column;
   align-items: center;
   width: 100%;
+
 }
 
 .option {
@@ -412,46 +525,79 @@ font-size: 0.7em;
   width: 100%;
   max-width: 600px;
   margin: 10px auto;
+align-items: stretch;
   justify-items: center;
 }
 
 .card-option {
-  padding: 10px 14px;
-  border: 1px solid #080303;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #c2c5f6;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #f9f9f9;
+  background-color: #fdf8fb;
   text-align: center;
   transition: all 0.2s ease-in-out;
   width: 100%;
-  max-width: 160px;
+  max-width: 200px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .card-option:hover{
   background-color: #e6a5f7;
   border-color: #b9b9f3;
+
 }
 .card-option.selected{
   border:2px solid #c5aeee;
-  background-color: #d9cbff;
-  color: #2b0057;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0 0 0 0.1);
+   transition: transform 0.3s ease;
   font-weight: bold;
 }
 .precio {
   gap: 2px;
   font-family: 'Comic Neue', cursive;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.5em;
+}
+.btn-comprar{
+background-color: #7009ee;
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+   position: relative;
+    margin-top: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-comprar:hover {
+  background-color: #5a07c4;
 }
 .contacto-layout {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 30px;
-  max-width: 1200px;
-  margin: auto;
+  padding: 20px;
+    max-width: 800px; 
+    margin: 20px auto; 
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    font-family: 'Comic Neue', cursive;
+    color: #555555;
+
 }
 
 .contacto-info {
@@ -479,6 +625,7 @@ font-size: 0.7em;
   font-size: 2.2rem;
   gap: 20px;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .video {
@@ -495,99 +642,136 @@ font-size: 0.7em;
 }
 
 .formulario-cont {
-  flex: 1;
-  max-width: 400px;
-  min-width: 280px;
-  padding: 25px;
-  background-color: #f3f0f9;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0 0 0 0.1);
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:150px;
+    gap: 18px;
+    padding: 30px;
+    border: 2px solid #dfb8f3; 
+    border-radius: 12px;
+    background-color: #f3f0f9; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
 }
 
 .formulario-cont input,
 .formulario-cont textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  font-size: 1rem;
-  border: 1px solid #d6d6e0;
-  border-radius: 8px;
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #d6d6e0; 
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .botones-formulario {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+     text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .boton-formulario {
-  flex: 1 1 48%;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: #c2e9f6;
-  color: #222121;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+ background-color: #7009ee;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; 
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
 }
 
 .boton-formulario:hover {
-  background-color: #aad4f6;
+  background-color: #5a07c4;
 }
 
 .grid-reseñas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-}
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #fdf8fb;
+  border-top: 2px solid #e6c5eb;
+  border-bottom: 2px solid #e6c5eb;
+gap:40px}
 
 .reseñas {
+  background-color: white;
   border: 2px solid #c2c5f6;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0 0 0 0.1);
-  font-family: 'Comic Neue', cursive;
-  transition: transform 0.3s ease;
+  border-radius: 15px;
+  padding: 1.5rem;
+text-align:center;
+box-shadow: 0 4px 10px rgba(0 0 0 0.1);
+   transition: transform 0.3s ease;
+padding-top: 10px;
 }
-
+.reseñas:hover {
+  transform: translateY(-5px);
+}
+.reseñas img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+  border:2px solid #e6c5eb
+}
 .cliente-nombre {
-  color: #9303fa;
-  font-size: 1.4rem;
+  color: #a94db5;
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
-
+ 
 .estrellas {
-  color: black;
+  color:#ffc107;
   font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .comentario {
   color: #222121;
-  font-size: 2rem;
-  text-align: left;
+  font-style: italic;
+  font-size:0.95rem;
+  
 }
 
 .boton-arriba {
   position: fixed;
   bottom: 20px;
   right: 15px;
-  background-color: #77eebf;
-  color: black;
-  padding: 10px 15px;
-  border-radius: 10%;
-  text-decoration: none;
+  background-color: #7009ee;
+  color: white;
+  padding: 15px 25px;
+   border: none;
+  border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; 
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+   cursor: pointer;
 }
 
 
@@ -698,9 +882,8 @@ font-size: 0.7em;
     height: 100px;
   }
 
-  .talle,
-  .precio,
-  .boton-agregar {
+  
+  .precio {
     font-size: 1rem;
     text-align: center;
   }
@@ -810,5 +993,5 @@ font-size: 0.7em;
   align-items: center;
   justify-content: center;
   min-height: 70vh;
-  padding-top: 85px;
+  padding-top: 40px;
 }
