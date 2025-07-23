@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Enterate de como funciona nuestra página, como comprar, nuestros envíos, y mucho más.">    <meta name="keywords" content="pañales, aceites, higiene, cuidado, bebé, AnnVi Pañalera online,shampoo bebés,acondicionador bebés,oleo calcáreo,pañales online,comprar pañales,productos bebé, algodón, toallitas húmedas,">
+    <meta name="author" content="Aldana Mendoza">
+    <meta name="robots" content="INDEX, FOLLOW">
+<meta title="Annvi Pañalera online">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,69 +20,84 @@
 </head>
 <body>
   <section id="subir"></section>
-  <header id="inicio" class="encabezado">
-    <div class="logo-titulo">
-      <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
-      <h1 class="titulo-pag">AnnVi Pañalera online</h1>
-    </div>
-    <h2 class="slogan">Cosas de bebé y más</h2>
-    <nav>
-      <div class="recuadro">
-        <div><a href="./index.html" class="item"><b>Inicio</b></a></div>
-        <div><a href="#" class="item"><b>Productos</b></a>
-          <ul class="submenu">
-            <li><a href="./pañales.html">Pañales</a></li>
-            <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
-            <li><a href="./baño.html">Baño</a></li>
-          </ul>
+
+<header id="inicio" class="encabezado">
+  <div class="logo-titulo">
+    <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
+    <h1 class="titulo-pag">AnnVi Pañalera online</h1>
+  </div>
+  <h2 class="slogan">Cosas de bebé y más</h2>
+  <!-- Botón del menú hamburguesa -->
+  <button id="menu-toggle" class="menu-toggle">
+    <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  <nav id="nav-menu" class="nav-menu">
+    <div class="recuadro">
+      <div><a href="./index.html" class="item">Inicio</a></div>
+      <div><a href="#" class="item">Productos</a>
+        <ul class="submenu">
+          <li><a href="./pañales.html">Pañales</a></li>
+          <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
+          <li><a href="./baño.html">Baño</a></li>
+        </ul>
+      </div>
+      <div><a href="./info-compra.html" class="item">¿Cómo comprar?</a></div>
+      <div><a href="./contacto.html" class="item">Contacto</a></div>
+      <div><a href="./reseñas.html" class="item">Reseñas</a></div>
+      <div class="item" id="cart-icon">Carrito
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contador-car" class="contador-car">0</span>
+        <div id="cart-dropdown" class="cart-dropdown">
+          <h3>Carrito</h3>
+          <ul id="lista-carrito"></ul>
+          <p>Total: $<span id="totalCarrito">0</span></p>
+          <div class="cart-buttons">
+          <button id="btnPagar">Pagar</button>
+          <button id="vaciar-carrito">Vaciar Carrito</button>
         </div>
-        <div><a href="./info-compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
-        <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
-         <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
-          <div class=" item" id="cart-icon">Carrito
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span id="contador-car" class="contador-car">0</span>
-      <div id="cart-dropdown" class="cart-dropdown">
-        <h3>Carrito</h3>
-        <ul id="lista-carrito"></ul>
-        <p>Total: $<span id="totalCarrito">0</span></p>
-        <div class="cart-buttons"></div>
-        <button id="btnPagar">Pagar</button>
-<button id="vaciar-carrito">Vaciar Carrito</button>
       </div>
     </div>
-  </div>
+  </nav>
   <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
-    </nav>
-  </header>
-  <main>
-    <h3 class="subtit"><strong>Información importante</strong></h3>
+</header>
 
-    <h3 class="subtit"><strong>¿Cómo comprar?</strong></h3>
-    <p class="pdescripcion">En nuestra tienda podés comparar productos de forma fácil y rápida. Cada producto cuenta con
-      su descripción detallada, donde podrás seleccionar el talle que necesitás y la cantidad de unidades que querés
-      comprar. Una vez elegido los productos, simplemente hacé clic en "Agregar al carrito".</p>
-    <p class="pdescripcion">Cuando tengas todo listo, andá al carrito de compras y hacé clic en "Iniciar
-      compra". Una vez enviada la solicitud, nos pondremos en contacto con vos para coordinar el método de pago y
-      confirmar el pedido. Recorda que el pedido se reserva por 24hs, luego de eso si no se concreta el pago se da por cancelado el pedido.</p>
-
-    <h3 class="subtit"><strong>Envíos</strong></h3>
-    <p class="pdescripcion">Realizamos envíos a través de Correo Argentino a cualquier punto del país. El costo y tiempo de entrega del
-      envío dependerá de tu ubicación y corre por cuenta del comprador. Una vez coordinado el pago y la preparación del
-      pedido, te enviaremos el número de seguimiento para que puedas saber en todo momento dónde está tu compra.</p>
-
-    <h3 class="subtit"><strong>Politicas de devolución</strong></h3>
-    <p class="pdescripcion">Si tu producto llegó dañado, incorrecto o incompleto, podés realizar un reclamo dentro de
-      los 5 días hábiles posteriores a la recepción del pedido. Para iniciar el proceso de devolución, comunicate con
-      nosotros indicando el problema y adjuntando fotos si es necesario. Evaluaremos el caso y te daremos una solución a
-      la brevedad.</p>
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/3npEwqCzGCg?si=s7dhL3hr3dEbA8NN"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </main>
+ <main>
+  <h3 class="subtit">
+    <strong>Información importante</strong></h3>
+    <div class="info-card">
+      <h3 class="subtit"><i class="fa-solid fa-cart-plus"></i> ¿Cómo comprar?</h3>
+      <p class="pdescripcion">En nuestra tienda podés comparar productos de forma fácil y rápida. Cada producto cuenta con su descripción detallada, donde podrás seleccionar el talle y la cantidad de unidades que necesitás. Una vez elegido, hacé clic en "Agregar al carrito".</p>
+      <p class="pdescripcion">Cuando tengas todo listo, andá al carrito de compras y hacé clic en "Iniciar compra". Nos pondremos en contacto para coordinar el pago. El pedido se reserva por 24hs.</p>
+<div class="paso-a-paso">
+  <div class="paso"><i class="fa-solid fa-magnifying-glass"></i> Explorá los productos</div>
+<div class="paso"><i class="fa-solid fa-cart-shopping"></i> Agregalos al carrito</div>
+<div class="paso"><i class="fa-solid fa-envelope"></i> Confirmá el pedido</div>
+<div class="paso"><i class="fa-solid fa-money-bill-wave"></i> Coordiná el pago</div>
+<div class="paso"><i class="fa-solid fa-box-open"></i> ¡Listo para enviar!</div>
+</div>
+</div>
+<div class="info-card">
+  <h3 class="subtit"><i class="fa-solid fa-truck-fast"></i> Envíos</h3>
+  <p class="pdescripcion">Realizamos envíos por Correo Argentino a todo el país. El costo y tiempo de entrega depende de tu ubicación. Una vez enviado, te pasamos el número de seguimiento.</p>
+</div>
+<div class="info-card"><h3 class="subtit"><i class="fa-solid fa-rotate-left"></i> Políticas de devolución</h3>
+  <p class="pdescripcion">Si recibiste un producto dañado o incorrecto, tenés 5 días hábiles para contactarnos. Escribinos con fotos del problema y lo solucionamos a la brevedad.</p>
+</div>
+<div class="info-card">
+  <h3 class="subtit"><i class="fa-regular fa-circle-question"></i> Preguntas frecuentes</h3>
+ <p class="pdescripcion"><strong>¿Puedo pagar en efectivo?</strong>Sí, se coordina por WhatsApp.</p>
+ <p class="pdescripcion"><strong>¿Cuánto demora el envío?</strong> Depende el domicilio de destino, y el servicio de correo. No te preocupes, te daremos el código de seguimiento y allí podras ver cuanto tarda.</p>
+</div>
+   
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/3npEwqCzGCg?si=s7dhL3hr3dEbA8NN"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</main>
   <section><a href="#subir" class="boton-arriba">Volver arriba</a></section>
   <footer class="pie">
       <div class="horarios">
@@ -105,13 +124,19 @@
     
       </div><br>
       <div class="creditos">
-        <p>Desarrollado por: Aldana Mendoza - 2025 |
+        <p>Desarrollado por: Aldana Mendoza - 2025 | Curso: FrontEnd JS - Talento Tech | Página web creada como proyecto final. |
           <a href="mailto:aldanayamilamendoza@gmail.com">aldanayamilamendoza@gmail.com</a>
         </p>
       </div>
     </footer>
-    <script src="./js/script.js">
+    <script src="./js/script.js" defer>
+  </script>
+  <!--script para menu hamburguesa -->
+<script>
+const toggleBtn = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+toggleBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('show');});
   </script>
 </body>
-
 </html>

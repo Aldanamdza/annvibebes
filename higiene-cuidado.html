@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Encontrá pañales, productos de higiene y cuidado para bebés, y más en AnnVi Pañalera online. Compra fácil y rápido, con opciones de pago seguras.">    <meta name="keywords" content="pañales, aceites, higiene, cuidado, bebé, AnnVi Pañalera online,shampoo bebés,acondicionador bebés,oleo calcáreo,pañales online,comprar pañales,productos bebé, algodón, toallitas húmedas,">
+    <meta name="author" content="Aldana Mendoza">
+    <meta name="robots" content="INDEX, FOLLOW">
+<meta title="Annvi Pañalera online">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,41 +22,48 @@
 
 <body>
       <section id="subir"></section>
-   <header id="inicio" class="encabezado">
-    <div class="logo-titulo">
-      <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
-      <h1 class="titulo-pag">AnnVi Pañalera online</h1>
-    </div>
-    <h2 class="slogan">Cosas de bebé y más</h2>
-   <nav>
-      <div class="recuadro">
-        <div><a href="./index.html" class="item">Inicio</a></div>
-        <div><a href="#" class="item">  roductos</a>
-          <ul class="submenu">
-            <li><a href="./pañales.html">Pañales</a></li>
-            <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
-            <li><a href="./baño.html">Baño</a></li>
-          </ul>
+<header id="inicio" class="encabezado">
+  <div class="logo-titulo">
+    <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
+    <h1 class="titulo-pag">AnnVi Pañalera online</h1>
+  </div>
+  <h2 class="slogan">Cosas de bebé y más</h2>
+  <!-- Botón del menú hamburguesa -->
+  <button id="menu-toggle" class="menu-toggle">
+    <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  <nav id="nav-menu" class="nav-menu">
+    <div class="recuadro">
+      <div><a href="./index.html" class="item">Inicio</a></div>
+      <div><a href="#" class="item">Productos</a>
+        <ul class="submenu">
+          <li><a href="./pañales.html">Pañales</a></li>
+          <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
+          <li><a href="./baño.html">Baño</a></li>
+        </ul>
+      </div>
+      <div><a href="./info-compra.html" class="item">¿Cómo comprar?</a></div>
+      <div><a href="./contacto.html" class="item">Contacto</a></div>
+      <div><a href="./reseñas.html" class="item">Reseñas</a></div>
+      <div class="item" id="cart-icon">Carrito
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contador-car" class="contador-car">0</span>
+        <div id="cart-dropdown" class="cart-dropdown">
+          <h3>Carrito</h3>
+          <ul id="lista-carrito"></ul>
+          <p>Total: $<span id="totalCarrito">0</span></p>
+          <div class="cart-buttons">
+          <button id="btnPagar">Pagar</button>
+          <button id="vaciar-carrito">Vaciar Carrito</button>
         </div>
-        <div><a href="./compra.html" class="item">¿Cómo comprar?</a></div>
-        <div><a href="./contacto.html" class="item">Contacto</a></div>
-         <div><a href="./reseñas.html" class="item">Reseñas</a></div>
-          <div class=" item" id="cart-icon">Carrito
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span id="contador-car" class="contador-car">0</span>
-      <div id="cart-dropdown" class="cart-dropdown">
-        <h3>Carrito</h3>
-        <ul id="lista-carrito"></ul>
-        <p>Total: $<span id="totalCarrito">0</span></p>
-        <div class="cart-buttons"></div>
-        <button id="btnPagar">Pagar</button>
-<button id="vaciar-carrito">Vaciar Carrito</button>
       </div>
     </div>
-  </div>
+  </nav>
   <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
-    </nav>
-  </header>
+</header>
+
     <main>
          <section id="paniales">
             <ul>
@@ -65,22 +76,19 @@
         <div class="grupo-productos">
             <div class="producto">
                 <div class="subproducto">Toa. Hum. J&J Extra Cuidado x48</div>
-                <div>
+                <div><br><br><br><br>
                     <img src="./images/toa-hum-jyj-extra-cuidado.jpg" alt="toa-hum-jyj" class="imgproducto">
-                </div>
-                <div class="precio">Precio: $5200</div>
-              
+                </div><br><br><br><br>
+                <div class="precio">Precio: $5200</div>              
                         <button class="btn-comprar" data-id="toallitas-jyj-extra-cuidado-48" data-nombre="Toa. Hum. J&J Extra Cuidado x48" data-precio="5200">Agregar al carrito</button>
                  
             </div>
             <div class="producto">
                 <div class="subproducto">Toa. Hum. J&J Limpieza y suavidad x44</div>
-                <div>
-                    <img src="./images/toa-hum-jyj-limpieza-suavidad.png" alt="toa-hum-jyj-limpieza"
-                        class="imgproducto">
-                </div>
-                <div class="precio">Precio: $3200</div>
-            
+                <div><br><br>
+                    <img src="./images/toa-hum-jyj-limpieza-suavidad.png" alt="toa-hum-jyj-limpieza" class="imgproducto">
+                </div><br><br><br><br>
+                <div class="precio">Precio: $3200</div>            
                         <button class="btn-comprar" data-id="toallitas-jyj-limpieza-44" data-nombre="Toa. Hum. J&J Limpieza y suavidad x44" data-precio="3200">Agregar al carrito</button>
                     
             </div>
@@ -338,13 +346,19 @@
     
       </div><br>
       <div class="creditos">
-        <p>Desarrollado por: Aldana Mendoza - 2025 |
+         <p>Desarrollado por: Aldana Mendoza - 2025 | Curso: FrontEnd JS - Talento Tech | Página web creada como proyecto final. |
           <a href="mailto:aldanayamilamendoza@gmail.com">aldanayamilamendoza@gmail.com</a>
         </p>
       </div>
     </footer>
-    <script src="./js/script.js">
+    <script src="./js/script.js" defer>
+  </script>
+  <!--script para menu hamburguesa -->
+<script>
+const toggleBtn = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+toggleBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('show');});
   </script>
 </body>
-
 </html>

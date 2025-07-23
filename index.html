@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <meta name="description" content="Todos los productos que tu bebé necesita, a un solo click de distancia. Compra fácil y rápido, con opciones de pago seguras.">    <meta name="author" content="Aldana Mendoza">
+    <meta name="robots" content="INDEX, FOLLOW">
+<meta title="Annvi Pañalera online">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -15,52 +18,87 @@
   <title>AnnVi Pañalera online</title>
 </head>
 <body>
-  <header id="inicio" class="encabezado">
-    <div class="logo-titulo">
-      <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
-      <h1 class="titulo-pag">AnnVi Pañalera online</h1>
-    </div>
-    <h2 class="slogan">Cosas de bebé y más</h2>
-   <nav>
-      <div class="recuadro">
-        <div><a href="./index.html" class="item">Inicio</a></div>
-        <div><a href="#" class="item">Productos</a>
-          <ul class="submenu">
-            <li><a href="./pañales.html">Pañales</a></li>
-            <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
-            <li><a href="./baño.html">Baño</a></li>
-          </ul>
+  <section id="subir"></section>
+<header id="inicio" class="encabezado">
+  <div class="logo-titulo">
+    <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
+    <h1 class="titulo-pag">AnnVi Pañalera online</h1>
+  </div>
+  <h2 class="slogan">Cosas de bebé y más</h2>
+  <!-- Botón del menú hamburguesa -->
+  <button id="menu-toggle" class="menu-toggle">
+    <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  <nav id="nav-menu" class="nav-menu">
+    <div class="recuadro">
+      <div><a href="./index.html" class="item">Inicio</a></div>
+      <div><a href="#" class="item">Productos</a>
+        <ul class="submenu">
+          <li><a href="./pañales.html">Pañales</a></li>
+          <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
+          <li><a href="./baño.html">Baño</a></li>
+        </ul>
+      </div>
+      <div><a href="./info-compra.html" class="item">¿Cómo comprar?</a></div>
+      <div><a href="./contacto.html" class="item">Contacto</a></div>
+      <div><a href="./reseñas.html" class="item">Reseñas</a></div>
+      <div class="item" id="cart-icon">Carrito
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contador-car" class="contador-car">0</span>
+        <div id="cart-dropdown" class="cart-dropdown">
+          <h3>Carrito</h3>
+          <ul id="lista-carrito"></ul>
+          <p>Total: $<span id="totalCarrito">0</span></p>
+          <div class="cart-buttons">
+          <button id="btnPagar">Pagar</button>
+          <button id="vaciar-carrito">Vaciar Carrito</button>
         </div>
-        <div><a href="./compra.html" class="item">¿Cómo comprar?</a></div>
-        <div><a href="./contacto.html" class="item">Contacto</a></div>
-        <div><a href="./reseñas.html" class="item">Reseñas</a></div>
-         <div class=" item icono-carrito" style="position: relative;" id="cart-icon">Carrito
-      <i class="fa-solid fa-cart-shopping" ></i>
-      <span id="contador-car" class="contador-car">0</span>
-      <div id="cart-dropdown" class="cart-dropdown">
-        <h3>Carrito</h3>
-        <ul id="lista-carrito"></ul>
-        <p>Total: $<span id="totalCarrito">0</span></p>
-        <div class="cart-buttons"></div>
-        <button id="btnPagar">Pagar</button>
-<button id="vaciar-carrito">Vaciar Carrito</button>
       </div>
     </div>
-  </div>
-    </nav>
-    <section id="subir"></section>
-  </header>
+  </nav>
+  <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
+</header>
+
   <main class="contenido-principal">
+    <!-- Carrusel de imágenes -->
+     <section class="slider">
+      <div class="slide active"><img src="./images/bebes-con-pañales.jpg" alt="bebes-con-pañales"></div>
+      <div class="slide"><img src="./images/A-happy-family.jpg" alt="familia-recibiendo-pedido"></div>
+      <div class="slide"><img src="./images/higiene-combo,.jpg" alt="productos-varios"></div>
+    </section>
     <p class="pdescripcion">
       Somos una pañalera online con una variedad de artículos pensados para el cuidado y la higiene de tu bebé.
       </p>
-    <p class="pdescripcion"> ¡IMPORTANTE!:</p>
-     <p class="pdescripcion">En nuestra página web no se puede realizar cobros de manera virtual, es decir que, el cobro de los pedidos se coordina a través de WhatsApp o Email (como prefieras) al  igual que el envìo.
-      Los pedidos que agregues al carrito se reservan por 24hs, pasado ese plazo si no se concreta el pago se dan por cancelados.
-    </p>
+  <h3 class="subtit"><strong>¡IMPORTANTE!</strong></h3>
+     <p class="pdescripcion">En nuestra página web no se puede realizar cobros de manera virtual, es decir que, el cobro de los pedidos se coordina a través de WhatsApp o Email (como prefieras) al  igual que el envìo.</p>
+      <p class="pdescripcion">Podés ver los productos que tenemos disponibles en la sección de <b>Productos</b>. En el caso de pañales antes de agregar al carrito, debes elegir un talle.</p>
+       
+    <p class="pdescripcion">Para realizar un pedido, debes completar el formulario en el resumen de Compra con tus datos y enviarlo. Luego, nos pondremos en contacto para coordinar el pago y el envío.</p>
+     <p class="pdescripcion">Los pedidos que agregues al carrito se reservan por 24hs, pasado ese plazo si no se concreta el pago se dan por cancelados.</p>
+      
     <div class="banner">
       <img src="./images/banner-pagina.png" alt="banner-pañalera">
     </div>
+    <p class="pdescripcion">Si tenés alguna duda o consulta, podés ir a la seccion de <b>Contacto</b></p>
+    <p class="pdescripcion">¡Gracias por elegirnos! Esperamos que encuentres todo lo que necesitas para tu bebé y que disfrutes de una experiencia de compra fácil y rápida con nosotros.</p>
+<!-- Cards informativas -->
+ <section class="cards-inicio">
+  <div class="card-info">
+    <i class="fa-solid fa-truck-fast"></i>
+    <h3>Envíos rápidos</h3><p>Coordinamos por WhatsApp según tu zona.</p></div>
+    <div class="card-info">
+      <i class="fa-solid fa-baby"></i>
+      <h3>Todo para tu bebé</h3>
+      <p>Pañales, higiene y combos especiales.</p>
+    </div>
+    <div class="card-info">
+  <i class="fa-solid fa-comments"></i>
+  <h3>Atención cercana</h3>
+  <p>Consultanos lo que necesites sin compromiso.</p>
+</div>
+</section>
   </main>
    <footer class="pie">
       <div class="horarios">
@@ -87,13 +125,29 @@
     
       </div><br>
       <div class="creditos">
-        <p>Desarrollado por: Aldana Mendoza - 2025 |
+          <p>Desarrollado por: Aldana Mendoza - 2025 | Curso: FrontEnd JS - Talento Tech | Página web creada como proyecto final. |
           <a href="mailto:aldanayamilamendoza@gmail.com">aldanayamilamendoza@gmail.com</a>
         </p>
       </div>
     </footer>
-    <script src="./js/script.js">
+    <script src="./js/script.js" defer></script>
+ <!--script para menu hamburguesa -->
+<script>
+const toggleBtn = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+toggleBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('show');});
   </script>
+  <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+function showNextSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+setInterval(showNextSlide, 4000); // Cambia cada 4 segundos, hecho 22/7
+</script>
 </body>
 
 </html>

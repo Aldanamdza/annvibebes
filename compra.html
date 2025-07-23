@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=""
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Resumen de compra">
+<meta name="keywords" content="pañales, aceites, higiene, cuidado, bebé, AnnVi Pañalera online,shampoo bebés,acondicionador bebés,oleo calcáreo,pañales online,comprar pañales,productos bebé, algodón, toallitas húmedas,">
+    <meta name="author" content="Aldana Mendoza">
+    <meta name="robots" content="INDEX, FOLLOW">
+<meta title="Annvi Pañalera online">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,30 +22,48 @@
 </head>
 <body>
      <section id="subir"></section>
-   <header id="inicio" class="encabezado">
-    <div class="logo-titulo">
-      <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
-      <h1 class="titulo-pag">AnnVi Pañalera online</h1>
-    </div>
-    <h2 class="slogan">Cosas de bebé y más</h2>
-   <nav>
-      <div class="recuadro">
-        <div><a href="./index.html" class="item"><b>Inicio</b></a></div>
-        <div><a href="#" class="item"><b>Productos</b></a>
-          <ul class="submenu">
-            <li><a href="./pañales.html">Pañales</a></li>
-            <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
-            <li><a href="./baño.html">Baño</a></li>
-          </ul>
-        </div>
-        <div><a href="./info-compra.html" class="item"><b>¿Cómo comprar?</b></a></div>
-        <div><a href="./contacto.html" class="item"><b>Contacto</b></a></div>
-        <div><a href="./reseñas.html" class="item"><b>Reseñas</b></a></div>
-         
+ <header id="inicio" class="encabezado">
+  <div class="logo-titulo">
+    <img src="./images/logo-pañalera.jpg" alt="logo-de-annVi" class="imglogo">
+    <h1 class="titulo-pag">AnnVi Pañalera online</h1>
   </div>
+  <h2 class="slogan">Cosas de bebé y más</h2>
+  <!-- Botón del menú hamburguesa -->
+  <button id="menu-toggle" class="menu-toggle">
+    <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  <nav id="nav-menu" class="nav-menu">
+    <div class="recuadro">
+      <div><a href="./index.html" class="item">Inicio</a></div>
+      <div><a href="#" class="item">Productos</a>
+        <ul class="submenu">
+          <li><a href="./pañales.html">Pañales</a></li>
+          <li><a href="./higiene-cuidado.html">Higiene y Cuidado</a></li>
+          <li><a href="./baño.html">Baño</a></li>
+        </ul>
+      </div>
+      <div><a href="./info-compra.html" class="item">¿Cómo comprar?</a></div>
+      <div><a href="./contacto.html" class="item">Contacto</a></div>
+      <div><a href="./reseñas.html" class="item">Reseñas</a></div>
+      <div class="item" id="cart-icon">Carrito
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contador-car" class="contador-car">0</span>
+        <div id="cart-dropdown" class="cart-dropdown">
+          <h3>Carrito</h3>
+          <ul id="lista-carrito"></ul>
+          <p>Total: $<span id="totalCarrito">0</span></p>
+          <div class="cart-buttons">
+          <button id="btnPagar">Pagar</button>
+          <button id="vaciar-carrito">Vaciar Carrito</button>
+        </div>
+      </div>
+    </div>
+  </nav>
   <div id="mensaje-carrito" class="mensaje-flotante">¡Producto agregado al carrito!</div>
-    </nav>
-  </header>
+</header>
+
    <h3 class="subtit" id="resumen">Resumen de compra</h3>
     <main>
         <section class="cuadro-resumen">
@@ -53,10 +76,12 @@
         <label>Email:</label>
         <input type="email" id="contactoEmail" name="email" placeholder="Correo electrónico" required><br>
         <label>Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+        <input type="tel" id="telefono" name="telefono" maxlength="10" placeholder="Teléfono">
         <br><br>
         <button type="submit" id="botonEnviar">Enviar solicitud de compra</button>
-    </form> </section>
+    </form></section>
+    <a href="./pañales.html" class="btn-volver">Volver a la tienda</a>
+    </main>
   <footer class="pie">
       <div class="horarios">
         <p><strong>Horarios de atención</strong></p>
@@ -82,13 +107,20 @@
     
       </div><br>
       <div class="creditos">
-        <p>Desarrollado por: Aldana Mendoza - 2025 |
+          <p>Desarrollado por: Aldana Mendoza - 2025 | Curso: FrontEnd JS - Talento Tech | Página web creada como proyecto final. |
           <a href="mailto:aldanayamilamendoza@gmail.com">aldanayamilamendoza@gmail.com</a>
         </p>
       </div>
     </footer>
-    <script src="./js/script.js">
+    <script src="./js/compra.js" defer>
+  </script>
+  <script src="./js/script.js" defer></script>
+ <!--script para menu hamburguesa -->
+<script>
+const toggleBtn = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+toggleBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('show');});
   </script>
 </body>
-
 </html>

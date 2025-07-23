@@ -1,5 +1,3 @@
-// Este es el contenido completo que DEBES tener en tu archivo: ./js/compra.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // --- Referencias a elementos específicos de compra.html ---
     const detalleCompraDiv = document.getElementById('detalle');
@@ -19,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let totalCompra = 0;
 
         if (carrito.length === 0) {
-            contenidoHTML = '<p>Tu carrito está vacío. ¡Añade algunos productos desde la página de <a href="index.html">Inicio</a> o <a href="pañales.html">Productos</a>!</p>';
+            contenidoHTML = '<p>Tu carrito está vacío. ¡Añade algunos productos desde la página de <a href="pañales.html">Productos</a>!</p>';
             // Si el carrito está vacío, ocultamos el formulario para evitar envíos sin productos.
             formulario.style.display = 'none';
         } else {
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             contenidoHTML += `<hr><p><strong>Total compra: $${totalCompra.toFixed(2)}</strong></p>`;
             // Aseguramos que el formulario esté visible si hay productos
-            formulario.style.display = 'flex'; // Usamos 'flex' porque tu CSS de #formulario usa flex-direction: column
+            formulario.style.display = 'flex'; 
         }
 
         detalleCompraDiv.innerHTML = contenidoHTML;
@@ -75,14 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
         botonEnviar.disabled = true;
         botonEnviar.textContent = 'Enviando...';
 
-        // Una vez que Formspree procese el formulario, el usuario será redirigido o verá un mensaje.
-        // Es un buen momento para limpiar el carrito *después* del envío (o en la página de éxito de Formspree).
-        // Por simplicidad, lo limpiamos aquí directamente al hacer submit.
         setTimeout(() => { // Pequeño retraso para dar tiempo a Formspree
             localStorage.removeItem('carrito');
             alert('¡Solicitud de compra enviada con éxito! Nos pondremos en contacto contigo pronto.');
-            // Puedes redirigir a una página de agradecimiento
-            // window.location.href = 'gracias.html';
+           
         }, 100);
     });
 

@@ -211,7 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`Total a pagar: $${total.toFixed(2)}. Redirigiendo a la página de compra...`);
         window.location.href = "compra.html";
     }
-
   
     if (cartIcon && cartDropdown) {
         cartIcon.addEventListener('click', (e) => {
@@ -232,8 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', agregarProducto);
     });
 
-    listaCarritoElement.addEventListener('click', (event) => {
-        if (event.target.classList.contains('eliminar-del-carrito')) {
+listaCarritoElement.addEventListener('click', (event) => {
+                if (event.target.classList.contains('eliminar-del-carrito')) {
             const uniqueIdAEliminar = event.target.dataset.uniqueId;
             let carrito = getCartFromLocalStorage();
             carrito = carrito.filter(producto => producto.uniqueId !== uniqueIdAEliminar);
